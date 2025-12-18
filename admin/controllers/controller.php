@@ -7,8 +7,70 @@ class controllerAdmin {
         $this->modelAdmin = new databaseAdmin();
     }
 
+    private function isSaveSession($admin){
+        if(session_status() === PHP_SESSION_NONE){
+            session_start();
+        }
+
+        $_SESSION['admin'] = [
+            "nameAdmin" => $admin['ten_nguoi_dung'],
+            "emailAdmin" => $admin['email'],
+            "role" => $admin['vai_tro']
+        ];
+
+    }
+
     public function loginAdminPage(){
         include "admin/views/login.php";
+    }
+
+    public function loginAdmin(){
+        $email = $_POST['mail'];
+        $passAdmin = $_POST['mk'];
+
+        $admin = $this->modelAdmin->getUserByEmail($email);
+
+        if(!$admin){
+            echo "<script>
+            alert('Email ko tồn tại');
+            window.location.href = 'admin.php';
+            </script>";
+            exit();
+        } if(!password_verify($passAdmin, $admin['mat_khau'])){
+            echo "<script>
+            alert('Sai mật khẩu!');
+            window.location.href = 'admin.php';
+            </script>";
+            exit();
+        } 
+
+        if($admin['vai_tro'] != 1 && $admin['vai_tro'] != 2){
+            echo "<script>
+            alert('Bạn không có quyền truy cập trang này!');
+            window.location.href = 'admin.php';
+            </script>";
+            exit();
+        }
+
+        $this->isSaveSession($admin);
+    
+        echo "<script>
+        alert('Đăng nhập thành công!');
+        window.location.href = 'admin.php?pageAdmin=dashboard';
+        </script>";
+        exit();
+    }
+
+    public function logoutAdmin(){
+        if(session_status() === PHP_SESSION_NONE){
+            session_start();
+        }
+
+            session_unset();
+            session_destroy();
+
+            header("Location: admin.php");
+            exit;
     }
 
     public function addProductPage(){
@@ -134,4 +196,58 @@ public function editCateProductsHandle(){
 //     $content = ob_get_clean();
 //     include "admin/views/layout.php";
 // }
+public function userControl(){
+    $user = $this->modelAdmin->listUser();
+    ob_start();
+    include "admin/views/userControl.php";
+    $content = ob_get_clean();
+    include "admin/views/layout.php";
+}
+
+public function addUserForm(){
+    include "admin/views/add_user_form.php";
+}
+
+public function addUser(){
+    $id = uniqid('USER');
+    $name = $_POST['user_name'];
+    $email = $_POST['user_email'];
+    $password = $_POST['user_password'];
+    $role = $_POST['user_role'];
+
+    if($this->modelAdmin->getUserByEmail($email)){
+        echo "<script> alert('Email đã tồn tại yêu cầu nhập lại email'); 
+            window.location.href = 'admin.php?pageAdmin=addUserForm';</script>";
+            return;
+    }
+
+    else{
+        $passwordHash = password_hash($password, PASSWORD_DEFAULT);
+        $this->modelAdmin->addUserFunction($id, $name, $email, $passwordHash, $role);
+
+        header("location: admin.php?pageAdmin=userControl");
+    }
+}
+
+public function deleteUser($idAdmin){
+    if('confirm("Bạn chắc chắn muốn xóa người dùng này chứ?");'){
+        $this->modelAdmin->deleteUserFunction($idAdmin);
+        header("location: admin.php?pageAdmin=userControl");
+    }
+}
+
+public function editUserForm($idAdmin){
+    $value = $this->modelAdmin->getUserByID($idAdmin);
+    include "admin/views/edit_user_form.php";
+}
+
+public function editUser($idAdmin){
+    $name = $_POST['user_name'];
+    $email = $_POST['user_email'];
+    $phone = (int)$_POST['phone_number'];
+    $role = $_POST['user_role'];
+
+    $this->modelAdmin->editUserFunction($name, $email, $phone, $role, $idAdmin);
+    header("location: admin.php?pageAdmin=userControl");
+}
 }
