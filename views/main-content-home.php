@@ -851,19 +851,23 @@
                     </div>
                     <div class="swiper home5-categori-swipe">
                         <div class="swiper-wrapper">
+                            <?php
+                            $categories = $this->model->getAllCategories();                              
+                            foreach ($categories as $category): ?>
                             <div class="swiper-slide">
                                 <div class="categorie-card style-2">
                                     <div class="categorice-image">
                                         <a href="index.php?page=productcatalog">
-                                            <?=$catelog  ?>
+                                            <img src="<?php echo $category['anh_dai_dien'] ?>" alt="">
                                         </a>
                                     </div>
                                     <div class="categorice-content text-center">
-                                        <h6><a href="index.php?page=productcatalog">Giày nam</a></h6>
+                                        <h6><a href="index.php?page=productcatalog"><?=$category['ten_danh_muc'] ?></a></h6>
                                     </div>
                                 </div>   
                             </div>
-                        </div>
+                            <?php endforeach; ?>
+                        </div>                       
                     </div>
                 </div>
             </div>
