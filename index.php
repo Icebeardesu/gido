@@ -17,7 +17,7 @@ switch ($page) {
     case 'addtocart':
         $controller->addtocart();
         break;
-     case 'editCateProducts':
+    case 'editCateProducts':
         $controllerAdmin->editCateProductsF();
         break;
     case 'detele':
