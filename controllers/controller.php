@@ -173,5 +173,15 @@ class controller {
         include "./views/about.php";
         include "./views/footer.php";
     }
+    public function checkout(){
+        if (empty($_SESSION['cart'])) {
+            header("Location: index.php?page=cart");
+            exit;
+        }
+
+        $productpayment = $_SESSION['cart'];
+        include_once "./views/checkout-page.php";
+        include "./views/footer.php";
+    }
 }
 ?>
