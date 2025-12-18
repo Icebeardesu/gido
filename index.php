@@ -11,21 +11,20 @@ switch ($page) {
         break;
     case 'shop':
         $controller->shop();
-        break;
     case 'shoppingcart':
         $controller->shoppingcart();
         break;
     case 'addtocart':
         $controller->addtocart();
         break;
-     case 'editCateProducts':
+    case 'editCateProducts':
         $controllerAdmin->editCateProductsF();
         break;
     case 'detele':
         $controller->deleteproduct();
         break;
-    case 'productdetail':
-        $controller->productdetail();
+    case 'productDetail':
+        $controller->productDetail($id);
         break;
     case 'productcatalog':
         $controller->productcatalog();
@@ -36,14 +35,11 @@ switch ($page) {
     case 'update':
         $controller->update();
         break;
-    case 'apply-coupon':
-        $controller->applyCoupon();
+    case "checkout-page":
+        $controller->show_checkout($id);
         break;
-    case 'remove-coupon':
-        $controller->removeCoupon();
-        break;
-    case 'faq':
-        $controller->faq();
+    case 'about':
+        $controller->about();
         break;
     default:
     echo "lỗi 404 - không tìm thấy trang này!";

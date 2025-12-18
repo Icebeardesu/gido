@@ -11,7 +11,8 @@ class controller {
         $products = $this->model->getAll();
         $category= $this->model->getAllCategories();
         $products = $this->model->getAll();
-        $topSelling = $this->model->getTopselling(1);
+        // $topSelling = $this->model->getTopselling(1);
+        include "./views/header-main-without-home.php";
         include "./views/main-content-home.php";
         include "./views/footer.php";
     }
@@ -164,6 +165,11 @@ class controller {
     public function faq(){
         include "./views/header-main-without-home.php";
         include "./views/faq.php";
+        include "./views/footer.php";
+    }
+    public function about(){
+        include "./views/header-main-without-home.php";
+        include "./views/about.php";
         include "./views/footer.php";
     }
 }
