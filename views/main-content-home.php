@@ -867,33 +867,6 @@
                     </div>
                 </div>
             </div>
-            
-            <div class="row wow animate fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms">
-                <div class="col-lg-12 position-relative">
-                    <div class="swiper home5-categori-swipe">
-                        <div class="swiper-wrapper">
-                            <?php foreach ($category as $item): ?>
-                            <div class="swiper-slide">
-                                <div class="categorie-card style-2">
-                                    
-                                    <div class="categorice-image">
-                                        <a href="index.php?page=productcatalog&id_danh_muc=<?= $item['id_danh_muc'] ?>">
-                                            <img src="assets/image/<?= $item['anh_dai_dien'] ?>" alt="">
-                                        </a>
-                                    </div>
-                                    <div class="categorice-content text-center">
-                                        <h6><a href="index.php?page=productcatalog"><?= $item['ten_danh_muc'] ?></a></h6>
-                                    </div>
-                                    
-                                </div>
-                            </div>
-                            <?php endforeach; ?>
-                        </div>
-                    </div>
-                    
-                </div>
-            </div>
-            
         </div>
     </div>
     <!-- categories section ends here -->
@@ -1235,7 +1208,6 @@
                 <div class="col-lg-12 mb-50">
                     <div class="section-title2">
                         <h3>Top Selling</h3>
-                        <h3>Sản phẩm bán chạy</h3>
                     </div>
                 </div>
             </div>
@@ -1245,7 +1217,6 @@
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
                                 <div class="product-card">
-                                    
                                     <div class="product-card-img">
                                         <a href="product-details.html">
                                             <img src="assets/image/home3/home3-product-image5.png" alt="">
@@ -1288,7 +1259,6 @@
                                             </ul>
                                         </div>
                                     </div>
-                                    
                                     <div class="product-card-content">
                                         <div class="rating">
                                             <ul>
@@ -1301,7 +1271,6 @@
                                         </div>
                                         <h6><a class="hover-underline" href="product-details.html">Trendy & Comfortable
                                                 Outerwear</a></h6>
-                                        <h6><a class="hover-underline" href="product-details.html"><?= $item['ten_san_pham'] ?></a></h6>
                                         <p class="price"><del>$345.00</del> $300.00 </p>
                                         <ul class="color-tag">
                                             <li class="medium-brown"><span>Brown</span></li>
@@ -3621,7 +3590,6 @@
             </div>
         </div>
     </div>
-
     <!-- limmited offer section end here -->
     <!-- Galleary section strats here -->
     <!-- <div class="gallery-section">
