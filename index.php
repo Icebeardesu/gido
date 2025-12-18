@@ -38,9 +38,8 @@ switch ($page) {
     case "checkout-page":
         $controller->show_checkout($id);
         break;
-    case 'about':
-        $controller->about();
-        break;
+    case 'checkout':
+        $controller->checkout();
     default:
     echo "lỗi 404 - không tìm thấy trang này!";
     break;

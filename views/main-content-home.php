@@ -824,28 +824,26 @@
                 <div class="col-lg-12 position-relative">
                     <div class="swiper home5-categori-swipe">
                         <div class="swiper-wrapper">
-                            <?php foreach ($category as $item): ?>
+                            <?php
+                            $categories = $this->model->getAllCategories();                              
+                            foreach ($categories as $category): ?>
                             <div class="swiper-slide">
-                                <div class="categorie-card style-2">
-                                    
+                                <div class="categorie-card style-2">                                    
                                     <div class="categorice-image">
-                                        <a href="index.php?page=productcatalog&id_danh_muc=<?= $item['id_danh_muc'] ?>">
-                                            <img src="assets/image/<?= $item['anh_dai_dien'] ?>" alt="">
+                                        <a href="index.php?page=productcatalog">
+                                            <img src="<?php echo $category['anh_dai_dien'] ?>" alt="">
                                         </a>
                                     </div>
                                     <div class="categorice-content text-center">
-                                        <h6><a href="index.php?page=productcatalog"><?= $item['ten_danh_muc'] ?></a></h6>
-                                    </div>
-                                    
+                                        <h6><a href="index.php?page=productcatalog"><?=$category['ten_danh_muc'] ?></a></h6>
+                                    </div>                                    
                                 </div>
                             </div>
                             <?php endforeach; ?>
-                        </div>
-                    </div>
-                    
+                        </div>                       
+                    </div>               
                 </div>
-            </div>
-            
+            </div>           
         </div>
     </div>
     <!-- categories section ends here -->
