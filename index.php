@@ -45,6 +45,8 @@ switch ($page) {
     case 'faq':
         $controller->faq();
         break;
+    case 'checkout':
+        $controller->checkout();
     default:
     echo "lỗi 404 - không tìm thấy trang này!";
     break;

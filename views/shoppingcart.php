@@ -535,12 +535,7 @@
                                         <!-- FORM ÁP MÃ -->
                                         <form action="index.php?page=apply-coupon" method="post">
                                             <div class="form-inner">
-                                                <select name="coupon" required>
-                                                    <option value="">-- Chọn mã giảm giá --</option>
-                                                    <option value="GIAM500K">GIAM10</option>
-                                                    <option value="SALE10">Giảm 10%</option>
-                                                    <option value="FREESHIP">Miễn phí vận chuyển</option>
-                                                </select>
+                                                <input type="text" name="coupon" placeholder="Mã giảm giá..." required>
                                                 <button type="submit" class="apply-btn">Áp dụng</button>
                                             </div>
                                         </form>

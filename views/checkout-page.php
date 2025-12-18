@@ -865,72 +865,35 @@
                             <form action="index.php?page=order_success&id=?" method="POST">
                                 <div class="cart-menu">
                                     <div class="cart-body">
+                                        <?php foreach($productpayment as $item): ?>
                                         <ul>
                                             <li class="single-item">
                                                 <div class="item-area">
                                                     <div class="main-item">
                                                         <div class="item-img">
-                                                           <a href="product-details.html"> <img src="assets/image/inner-page/sb-product1.png" alt=""></a>
+                                                           <a href="product-details.html"> <img src="assets/image/products/<?= $item['anh']  ?> "alt=""></a>
                                                            <div class="close-btn">
                                                                 <i class="bi bi-x"></i>
                                                            </div>
                                                         </div>
                                                         <div class="content-and-quantity">
                                                             <div class="content">
-                                                                <h6><a href="product-details.html">Ultimate Comfort &
-                                                                        Trendy Design</a></h6>
-                                                                <span>2 x $190.00</span>
+                                                                <h6><a href="product-details.html"><?= $item['ten_san_pham'] ?></a></h6>
+                                                                <span><?= number_format($item['gia'],0,',','.') ?> VNĐ</span>
                                                             </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="quantity-area">
-                                                        <div class="quantity">
-                                                            <a class="quantity__minus"><span><i
-                                                                        class="bi bi-dash"></i></span></a>
-                                                            <input name="quantity" type="text" class="quantity__input"
-                                                                value="01">
-                                                            <a class="quantity__plus"><span><i
-                                                                        class="bi bi-plus"></i></span></a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <li class="single-item">
-                                                <div class="item-area">
-                                                    <div class="main-item">
-                                                        <div class="item-img">
-                                                            <a href="product-details.html"><img src="assets/image/inner-page/sb-product2.png" alt=""></a>
-                                                            <div class="close-btn">
-                                                                <i class="bi bi-x"></i>
-                                                           </div>
-                                                        </div>
-                                                        <div class="content-and-quantity">
-                                                            <div class="content">
-                                                                <h6><a href="product-details.html">Classic Navy Slim Fit Blazer</a></h6>
-                                                                <span>2 x $190</span>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="quantity-area">
-                                                        <div class="quantity">
-                                                            <a class="quantity__minus"><span><i
-                                                                        class="bi bi-dash"></i></span></a>
-                                                            <input name="quantity" type="text" class="quantity__input"
-                                                                value="01">
-                                                            <a class="quantity__plus"><span><i
-                                                                        class="bi bi-plus"></i></span></a>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </li>
                                         </ul>
+                                        <?php endforeach; ?>
                                     </div>
                                     <div class="cart-footer">
                                         <div class="pricing-area mb-40">
                                             <ul>
                                                 <li>
                                                     <strong>Tổng phụ</strong>
-                                                    <strong class="price">$348.00</strong>
+                                                    <strong class="price">999</strong>
                                                 </li>
                                                 <li>
                                                     <strong>Phí vận chuyển</strong>
@@ -961,51 +924,9 @@
                                                     </div>
                                                 </li>
                                             </ul>
-                                            <div class="payment-option">
-                                                <ul>
-                                                    <li>
-                                                        <img src="assets/image/inner-page/icon/visa-card.svg" alt="">
-                                                    </li>
-                                                    <li>
-                                                        <img src="assets/image/inner-page/icon/amex-card.svg" alt="">
-                                                    </li>
-                                                    <li>
-                                                        <img src="assets/image/inner-page/icon/discover-card.svg" alt="">
-                                                    </li>
-                                                    <li>
-                                                        <img src="assets/image/inner-page/icon/master-card.svg" alt="">
-                                                    </li>
-                                                    <li>
-                                                        <img src="assets/image/inner-page/icon/stripe-card.svg" alt="">
-                                                    </li>
-                                                    <li>
-                                                        <img src="assets/image/inner-page/icon/paypal.svg" alt="">
-                                                    </li>
-                                                    <li>
-                                                        <img src="assets/image/inner-page/icon/apple-card.svg" alt="">
-                                                    </li>
-                                                </ul>
-                                            </div>
                                             <div class="choose-payment-method pt-25" id="strip-payment" style="display: none;">
                                                 <div class="row g-4">
-                                                    <div class="col-md-12">
-                                                        <div class="form-inner">
-                                                            <label>Số thẻ</label>
-                                                            <input type="text" placeholder="1234 1234 1234 1234">
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-6">
-                                                        <div class="form-inner">
-                                                            <label>Expiry</label>
-                                                            <input type="text" placeholder="MM/YY">
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-6">
-                                                        <div class="form-inner">
-                                                            <label>CVC</label>
-                                                            <input type="text" placeholder="CVC">
-                                                        </div>
-                                                    </div>
+                                                    <img src="assets/image/QR_productpayment.jpg" alt="">
                                                 </div>
                                             </div>
                                         </div>

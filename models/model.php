@@ -64,6 +64,5 @@ class database {
         $stmt->execute([$code, $cartTotal]);
         return $stmt->fetch(PDO::FETCH_ASSOC);
     }
-
 }
 ?>
