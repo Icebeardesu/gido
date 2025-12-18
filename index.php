@@ -11,7 +11,6 @@ switch ($page) {
         break;
     case 'shop':
         $controller->shop();
-        break;
     case 'shoppingcart':
         $controller->shoppingcart();
         break;
@@ -24,8 +23,8 @@ switch ($page) {
     case 'detele':
         $controller->deleteproduct();
         break;
-    case 'productdetail':
-        $controller->productdetail();
+    case 'productDetail':
+        $controller->productDetail($id);
         break;
     case 'productcatalog':
         $controller->productcatalog();
@@ -36,14 +35,8 @@ switch ($page) {
     case 'update':
         $controller->update();
         break;
-    case 'apply-coupon':
-        $controller->applyCoupon();
-        break;
-    case 'remove-coupon':
-        $controller->removeCoupon();
-        break;
-    case 'faq':
-        $controller->faq();
+    case "checkout-page":
+        $controller->show_checkout($id);
         break;
     case 'about':
         $controller->about();
