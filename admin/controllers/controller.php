@@ -67,15 +67,15 @@ class controllerAdmin {
     $products = $this->modelAdmin->getAllProduct();
     ob_start();
     require "admin/views/productControl.php";
-    $content = ob_get_clean();
-    include "admin/views/layout.php";
 }
 
 public function dashboard(){
-    ob_start();
-    require "admin/views/dashboard.php";
-    $content = ob_get_clean();
-    include "admin/views/layout.php";
+    $dashboardData = [
+        'totalProducts' => $this->modelAdmin->countProducts(),
+        'totalCategories' => $this->modelAdmin->countCategories()
+    ];
+
+    include "admin/views/dashboard.php";
 }
 
 
@@ -84,8 +84,6 @@ public function cateProducts(){
 
     ob_start();
     require "admin/views/cateProducts.php";
-    $content = ob_get_clean();
-    include "admin/views/layout.php";
 }
 public function addcateProductsF(){
     include "admin/views/addcateProducts.php";

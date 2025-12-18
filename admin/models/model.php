@@ -66,5 +66,17 @@ class databaseAdmin {
                                      WHERE id_danh_muc=?");
         $pdo->execute([$ten_dm, $anh_dai_dien, $id_dm]);
     }
+    public function countProducts(){
+        $stmt = $this->conn->prepare("SELECT COUNT(*) as total FROM san_pham");
+        $stmt->execute();
+        $result = $stmt->fetch(PDO::FETCH_ASSOC);
+        return $result['total'];    
+    }
+    public function countCategories(){
+        $stmt = $this->conn->prepare("SELECT COUNT(*) as total FROM danh_muc");
+        $stmt->execute();
+        $result = $stmt->fetch(PDO::FETCH_ASSOC);
+        return $result['total'];
+    }
 }
 ?>
