@@ -23,7 +23,7 @@
 </head>
 
 <body>
-    <!-- product view modal  -->
+
     <div class="modal product-view-modal" id="product-view">
         <div class="modal-dialog modal-xl modal-dialog-centered">
             <div class="modal-content">
@@ -105,7 +105,7 @@
                                                 <i class="bi bi-star-fill"></i>
                                                 <i class="bi bi-star-fill"></i>
                                             </div>
-                                            <p><a href="#reviews">(2 REVIEWS)</a></p>
+                                            <p><a href="#reviews">5 đánh giá</a></p>
                                         </div>
                                     </div>
                                     <div class="price-area">
@@ -116,23 +116,24 @@
                                             <h6 class="widget-title">Kích cỡ</h6>
                                             <div class="size-list">
                                                 <ul>
-                                                    <li class="select-wrap selected">39</li>
-                                                    <li class="select-wrap">40</li>
+                                                    <li class="select-wrap selected">40</li>
                                                     <li class="select-wrap">41</li>
                                                     <li class="select-wrap">42</li>
                                                     <li class="select-wrap">43</li>
                                                     <li class="select-wrap">44</li>
+                                                    <li class="select-wrap">45</li>
                                                 </ul>
                                             </div>
                                         </div>
                                         <div class="quantity-color">
-                                            <h6 class="widget-title">Màu sắc</h6>
+                                            <h6 class="widget-title">Color</h6>
                                             <ul class="color-list">
                                                 <li class="select-wrap selected"><span></span></li>
                                                 <li class="select-wrap"><span></span></li>
                                                 <li class="select-wrap"><span></span></li>
                                                 <li class="select-wrap"><span></span></li>
-                                               
+                                                <li class="select-wrap"><span></span></li>
+                                                <li class="select-wrap"><span></span></li>
                                             </ul>
                                         </div>
                                         <div class="quantity-color">
@@ -143,12 +144,12 @@
                                                     <a class="quantity__plus"><span><i class="bi bi-plus"></i></span></a>
                                                 </div>
                                             </div>
-                                            <h6 class="widget-title">Trạng thái: <span>Còn hàng</span></h6>
+                                            <h6 class="widget-title">Availability: <span>In stock</span></h6>
                                         </div>
                                     </div>
                                     <div class="shop-details-btn">
-                                        <a class="primary-btn" href="cart-page.html">THÊM VÀO GIỎ HÀNG</a>
-                                        <a class="primary-btn2" href="checkout-page.html">MUA NGAY</a>
+                                        <a class="primary-btn" href="cart-page.html">ADD TO CART</a>
+                                        <a class="primary-btn2" href="checkout-page.html">BUY NOW</a>
                                     </div>
                                     <ul class="product-shipping-delivers">
                                         <li class="product-shipping">
@@ -249,14 +250,14 @@
                         <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
                             <div class="login-registration-form">
                                 <div class="form-title">
-                                    <h3>Đăng nhập</h3>
+                                    <h3>Đăng Nhập</h3>
                                 </div>
                                 <form>
                                     <div class="form-inner mb-35">
-                                        <input type="text" placeholder="Tài khoản hoặc Email *">
+                                        <input type="text" placeholder="Tài khoản và Email *">
                                     </div>
                                     <div class="form-inner">
-                                        <input id="password" type="password" placeholder="Mật khẩu">
+                                        <input id="password" type="password" placeholder="Mật khẩu *">
                                         <i class="bi bi-eye-slash" id="togglePassword"></i>
                                     </div>
                                     <div class="form-remember-forget">
@@ -269,7 +270,7 @@
                                     <button class="primary-btn" type="submit">
                                         Đăng nhập
                                     </button>
-                                    <a href="#" class="member">bạn chưa có tài khoản !</a>
+                                    <a href="#" class="member">Bạn chưa có tài khoản ?</a>
                                 </form>
                             </div>
                         </div>
@@ -283,7 +284,7 @@
                                         <input type="text" placeholder="Tên tài khoản *">
                                     </div>
                                     <div class="form-inner mb-25">
-                                        <input type="email" placeholder="Email *">
+                                        <input type="email" placeholder="Email  *">
                                     </div>
                                     <div class="form-inner mb-25">
                                         <input id="password2" type="password" placeholder="Mật khẩu *">
@@ -294,7 +295,7 @@
                                         <i class="bi bi-eye-slash" id="togglePassword3"></i>
                                     </div>
                                     <button class="primary-btn" type="submit">
-                                        Đăng ký
+                                        Đăng ký 
                                     </button>
                                 </form>
                             </div>
@@ -733,7 +734,7 @@
                 </a>
             </li>
             <li>
-                <a href="whislist.html">
+                <a href="#">
                     <div class="icon">
                         <span class="number">3</span>
                         <svg width="32" height="24" viewBox="0 0 32 24" xmlns="http://www.w3.org/2000/svg">
@@ -770,17 +771,17 @@
                         </div>
                         <div class="swiper-slide">
                             <div class="banner-bg">
-                                <img src="assets/image/home5/home5-banner-img4.jpg" alt="">
+                                <img src="assets/image/home5/home-banner-img4.jpg" alt="">
                             </div>
                         </div>
                         <div class="swiper-slide">
                             <div class="banner-bg">
-                                <img src="assets/image/home5/home5-banner-img5.jpg" alt="">
+                                <img src="assets/image/home5/home-banner-img5.jpg" alt="">
                             </div>
                         </div>
                         <div class="swiper-slide">
                             <div class="banner-bg">
-                                <img src="assets/image/home5/home5-banner-img6.jpg" alt="">
+                                <img src="assets/image/home5/home-banner-img6.jpg" alt="">
                             </div>
                         </div>
                     </div>
@@ -818,54 +819,33 @@
                     </div>
                 </div>
             </div>
+            
             <div class="row wow animate fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms">
                 <div class="col-lg-12 position-relative">
-                    <div class="slider-btn-groups3">
-                        <div class="slider-btn prev-1">
-                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <mask id="mask0_1583_345" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0"
-                                    width="14" height="14">
-                                    <rect width="14" height="14" fill="#DA8E8E" />
-                                </mask>
-                                <g mask="url(#mask0_1583_345)">
-                                    <path d="M11 13C10 10.5 5 8 2 7C5 6 9.5 4.5 11 1" stroke="white" stroke-width="1.5"
-                                        stroke-linecap="round" />
-                                </g>
-                            </svg>
-                        </div>
-                        <div class="slider-btn next-1">
-                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <mask id="mask0_1583_340" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0"
-                                    width="14" height="14">
-                                    <rect width="14" height="14" transform="matrix(-1 0 0 1 14 0)" fill="#DA8E8E" />
-                                </mask>
-                                <g mask="url(#mask0_1583_340)">
-                                    <path d="M3 13C4 10.5 9 8 12 7C9 6 4.5 4.5 3 1" stroke="#1E1E1E" stroke-width="1.5"
-                                        stroke-linecap="round" />
-                                </g>
-                            </svg>
-                        </div>
-                    </div>
                     <div class="swiper home5-categori-swipe">
                         <div class="swiper-wrapper">
+                            <?php foreach ($category as $item): ?>
                             <div class="swiper-slide">
                                 <div class="categorie-card style-2">
+                                    
                                     <div class="categorice-image">
-                                        <a href="index.php?page=productcatalog">
-                                            <?=$catelog  ?>
+                                        <a href="index.php?page=productcatalog&id_danh_muc=<?= $item['id_danh_muc'] ?>">
+                                            <img src="assets/image/<?= $item['anh_dai_dien'] ?>" alt="">
                                         </a>
                                     </div>
                                     <div class="categorice-content text-center">
-                                        <h6><a href="index.php?page=productcatalog">Giày nam</a></h6>
+                                        <h6><a href="index.php?page=productcatalog"><?= $item['ten_danh_muc'] ?></a></h6>
                                     </div>
-                                </div>   
+                                    
+                                </div>
                             </div>
+                            <?php endforeach; ?>
                         </div>
                     </div>
+                    
                 </div>
             </div>
+            
         </div>
     </div>
     <!-- categories section ends here -->
@@ -994,7 +974,7 @@
             <div class="row  wow animate fadeInDown" data-wow-delay="200ms" data-wow-duration="1500ms">
                 <div class="col-lg-12 mb-50">
                     <div class="section-title2">
-                        <h3>Top Selling</h3>
+                        <h3>Sản phẩm bán chạy</h3>
                     </div>
                 </div>
             </div>
@@ -1005,6 +985,7 @@
                             <?php foreach ($best_sell_product as $piece):?>
                             <div class="swiper-slide">
                                 <div class="product-card">
+                                    
                                     <div class="product-card-img">
                                         <a href="product-details.html">
                                             <img src="<?= $piece['anh']; ?>" alt="">
@@ -1047,6 +1028,7 @@
                                             </ul>
                                         </div>
                                     </div>
+                                    
                                     <div class="product-card-content">
                                         <div class="rating">
                                             <ul>

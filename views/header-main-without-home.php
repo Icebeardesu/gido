@@ -274,7 +274,7 @@ if(session_status() === PHP_SESSION_NONE){
                         <li><a href="error.html">Error</a></li>
                     </ul>
                 </li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="index.php?page=about">About</a></li>
             </ul>
             <div class="d-xl-none d-block">
                 <div class="mobile-search-area mb-30">
