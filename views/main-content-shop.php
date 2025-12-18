@@ -24,6 +24,7 @@
 
 <body>
 
+    <!-- product view modal  -->
     <div class="modal product-view-modal" id="product-view">
         <div class="modal-dialog modal-xl modal-dialog-centered">
             <div class="modal-content">
@@ -95,6 +96,7 @@
                             </div>
                             <div class="col-lg-6">
                                 <div class="shop-details-content">
+                                    <h3></h3>
                                     <h3>Trendy & Comfortable Outerwear</h3>
                                     <div class="rating-review">
                                         <div class="rating">
@@ -466,6 +468,41 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="single-widgets mb-70">
+                            <div class="widget-title">
+                                <h5>Kích cỡ</h5>
+                            </div>
+                            <div class="size-list">
+                                <ul>
+                                    <li class="select-wrap selected">39</li>
+                                    <li class="select-wrap">40</li>
+                                    <li class="select-wrap">41</li>
+                                    <li class="select-wrap">42</li>
+                                    <li class="select-wrap">43</li>
+                                    <li class="select-wrap">44</li>
+                                    <li class="select-wrap">45</li>
+                                    <li class="select-wrap">46</li>
+                                    <li class="select-wrap">47</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="single-widgets mb-70">
+                            <div class="widget-title">
+                                <h5>Màu sắc</h5>
+                            </div>
+                            <div class="color-area">
+                                <ul class="color-list">
+                                    <li class="select-wrap selected" style="background-color: #897f7fff;"></li>
+                                    <li class="select-wrap" style="background-color: #000000ff;"></li>
+                                    <li class="select-wrap" style="background-color: #ff6e6eff;"></li>
+                                    <li class="select-wrap" style="background-color: #70ff70ff;"></li>
+                                    <li class="select-wrap" style="background-color: #56567eff;"></li>
+                                    <li class="select-wrap" style="background-color: #e9e946ff;"></li>
+                                    <li class="select-wrap" style="background-color: #ae3aaeff;"></li>
+                                    <li class="select-wrap" style="background-color: #3edcdcff;"></li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="col-lg-9 order-lg-2 order-1">
@@ -479,6 +516,7 @@
                                         <div class="product-card">
                                             <div class="product-card-img">
                                                 <a href="index.php?page=productDetail&id=<?= $item['id_san_pham'] ?>">
+                                                    <img src="<?=$item['anh']; ?>" alt="">
                                                     <img src="./assets/image/products/<?php echo $item['anh']; ?>" alt="">
                                                 </a>
                                                 <div class="overlay">
@@ -512,6 +550,168 @@
                             </div>
                         </div>
                         <script>
+                            document.addEventListener('DOMContentLoaded', () => {
+                                const checkboxes = document.querySelectorAll('.filter-category');
+                                const products = document.querySelectorAll('.product-item');
+
+                                checkboxes.forEach(cb => {
+                                    cb.addEventListener('change', function () {
+
+                                        // 👉 BỎ CHECK TẤT CẢ CÁI KHÁC
+                                        checkboxes.forEach(other => {
+                                            if (other !== this) other.checked = false;
+                                        });
+
+                                        const selectedCategory = this.checked ? this.value : null;
+
+                                        products.forEach(product => {
+                                            const productCategory = product.dataset.category;
+
+                                            if (!selectedCategory || productCategory === selectedCategory) {
+                                                product.style.display = 'block';
+                                            } else {
+                                                product.style.display = 'none';
+                                            }
+                                        });
+                                    });
+                                });
+                            });
+                            document.addEventListener('DOMContentLoaded', function () {
+                            const searchInput = document.getElementById('searchInput');
+                            const products = document.querySelectorAll('.product-item');
+
+                            searchInput.addEventListener('input', function () {
+                                const keyword = this.value.toLowerCase().trim();
+
+                                products.forEach(product => {
+                                    const name = product.dataset.name;
+
+                                    if (name.includes(keyword)) {
+                                        product.style.display = '';
+                                    } else {
+                                        product.style.display = 'none';
+                                    }
+                                });
+                            });
+                            });
+                           document.addEventListener("DOMContentLoaded", function () {
+                            const products = Array.from(document.querySelectorAll('.product-item'));
+                            const checkboxes = document.querySelectorAll('.filter-category');
+                            const searchInput = document.getElementById('searchInput');
+                            const pagination = document.getElementById('pagination');
+                            const prevBtn = document.getElementById('prevPage');
+                            const nextBtn = document.getElementById('nextPage');
+
+                            const ITEMS_PER_PAGE = 15;
+                            let currentPage = 1;
+                            let filteredProducts = [...products];
+
+                            /* ===== FILTER ===== */
+                            function filterProducts() {
+                                const keyword = searchInput.value.toLowerCase();
+                                const selectedCategories = Array.from(checkboxes)
+                                    .filter(cb => cb.checked)
+                                    .map(cb => cb.value);
+
+                                filteredProducts = products.filter(product => {
+                                    const name = product.dataset.name.toLowerCase();
+                                    const category = product.dataset.category;
+
+                                    const matchName = name.includes(keyword);
+                                    const matchCategory =
+                                        selectedCategories.length === 0 ||
+                                        selectedCategories.includes(category);
+
+                                    return matchName && matchCategory;
+                                });
+
+                                currentPage = 1;
+                                renderProducts();
+                                renderPagination();
+                            }
+
+                            /* ===== RENDER PRODUCT ===== */
+                            function renderProducts() {
+                                products.forEach(p => p.style.display = 'none');
+
+                                const start = (currentPage - 1) * ITEMS_PER_PAGE;
+                                const end = start + ITEMS_PER_PAGE;
+
+                                filteredProducts.slice(start, end).forEach(p => {
+                                    p.style.display = 'block';
+                                });
+                            }
+
+                            /* ===== PAGINATION ===== */
+                            function renderPagination() {
+                                pagination.innerHTML = '';
+                                const totalPages = Math.ceil(filteredProducts.length / ITEMS_PER_PAGE);
+
+                                prevBtn.disabled = currentPage === 1;
+                                nextBtn.disabled = currentPage === totalPages || totalPages === 0;
+
+                                if (totalPages <= 1) return;
+
+                                for (let i = 1; i <= totalPages; i++) {
+                                    const li = document.createElement('li');
+                                    li.className = i === currentPage ? 'active' : '';
+
+                                    const btn = document.createElement('button');
+                                    btn.type = 'button';
+                                    btn.innerText = i < 10 ? `0${i}` : i;
+
+                                    btn.addEventListener('click', () => {
+                                        currentPage = i;
+                                        renderProducts();
+                                        renderPagination();
+                                    });
+
+                                    li.appendChild(btn);
+                                    pagination.appendChild(li);
+                                }
+                            }
+
+                            /* ===== PREV / NEXT ===== */
+                            prevBtn.addEventListener('click', () => {
+                                if (currentPage > 1) {
+                                    currentPage--;
+                                    renderProducts();
+                                    renderPagination();
+                                }
+                            });
+
+                            nextBtn.addEventListener('click', () => {
+                                const totalPages = Math.ceil(filteredProducts.length / ITEMS_PER_PAGE);
+                                if (currentPage < totalPages) {
+                                    currentPage++;
+                                    renderProducts();
+                                    renderPagination();
+                                }
+                            });
+
+                            /* ===== EVENTS ===== */
+                            searchInput.addEventListener('keyup', filterProducts);
+                            checkboxes.forEach(cb => cb.addEventListener('change', filterProducts));
+
+                            /* ===== INIT ===== */
+                            filterProducts();
+                            });
+                            document.querySelectorAll('.add-cart-btn').forEach(btn => {
+                            btn.addEventListener('click', function() {
+                                        const id = this.dataset.id;
+
+                                        fetch(`index.php?page=addtocart&id=${id}`, {
+                                            method: 'GET'
+                                        })
+                                        .then(response => {
+                                            if (response.ok) {
+                                                alert('Đã thêm sản phẩm vào giỏ hàng!');
+                                                // Optionally update cart counter
+                                            }
+                                        });
+                                    });
+                                });
+                        </script>
                             document.addEventListener("DOMContentLoaded", function () {
 
                                 const products = Array.from(document.querySelectorAll('.product-item'));
@@ -645,4 +845,32 @@
     </div>
     <!-- product-card section ends here -->
     <!-- footer top section strats here -->
+    <div class="footer-top-area">
+        <div class="container">
+            <div class="footer-top-wrapper">
+                <div class="row">
+                    <div class="col-xl-5 col-lg-6 d-lg-flex align-items-end d-none">
+                        <div class="footer-top-img">
+                            <img src="assets/image/inner-page/footer-top-image.png" alt="">
+                        </div>
+                    </div>
+                    <div class="col-xl-7 col-lg-6 d-flex align-items-center">
+                        <div class="foort-top-content">
+                            <h3>Limited Time Offer</h3>
+                            <h2>Up to 60% Off on Trendy Styles!</h2>
+                            <div class="countdown-timer">
+                                <ul data-countdown="2025-09-15 12:00:00">
+                                    <li data-days="00">00</li>
+                                    <li data-hours="00">00</li>
+                                    <li data-minutes="00">00</li>
+                                    <li data-seconds="00">00</li>
+                                </ul>
+                            </div>
+                            <a href="3columns-left.html" class="primary-btn">SHOP NOW</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     

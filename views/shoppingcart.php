@@ -1,3 +1,6 @@
+
+<!DOCTYPE html>
+<html lang="en">
 <!DOCTYPE html>
 <html lang="en">
 
@@ -18,6 +21,20 @@
     <link rel="stylesheet" href="assets/css/boxicons.min.css">
     <!-- My css link -->
     <link rel="stylesheet" href="assets/css/style.css">
+    <title>Ethics - Fashion Shop HTML Template</title>
+    <link rel="icon" href="assets/image/thumbnail.svg" type="image/gif" sizes="20x20">
+</head>
+<body>
+    <!-- Back To Top -->
+    <div class="progress-wrap">
+		<svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+			<path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" style="transition: stroke-dashoffset 10ms linear; stroke-dasharray: 307.919, 307.919; stroke-dashoffset: 307.919;"></path>
+		</svg>
+        <svg aria-hidden="true" class="arrow" width="16px" height="16px" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg">
+            <path d="M34.9 289.5l-22.2-22.2c-9.4-9.4-9.4-24.6 0-33.9L207 39c9.4-9.4 24.6-9.4 33.9 0l194.3 194.3c9.4 9.4 9.4 24.6 0 33.9L413 289.4c-9.5 9.5-25 9.3-34.3-.4L264 168.6V456c0 13.3-10.7 24-24 24h-32c-13.3 0-24-10.7-24-24V168.6L69.2 289.1c-9.3 9.8-24.8 10-34.3.4z">
+            </path>
+        </svg>
+	</div>
     <title>IgniteFoot - Bán giày thể thao nam</title>
     <link rel="icon" href="assets/image/thumbnail.svg" type="image/gif" sizes="20x20">
 </head>
@@ -413,6 +430,10 @@
             }
         }
 
+        $shipping = 0;        // Free ship
+        $pickupFee = 10000;  // Nếu có
+        $total = $grandTotal + $shipping; // hoặc + $pickupFee
+    ?>
         /* LƯU VÀO SESSION (QUAN TRỌNG) */
         $_SESSION['cart_total'] = $grandTotal;
 
@@ -513,6 +534,7 @@
                             <ul class="order-summary-list">
 
                                 <li>
+                                    <strong>Tổng tiền</strong>
                                     <strong>Phụ tiền</strong>
                                     <span><?= number_format($grandTotal, 0, ',', '.') ?> VNĐ</span>
                                 </li>
@@ -520,6 +542,24 @@
                                 <li>
                                     <strong>Vận chuyển</strong>
                                     <div class="order-info">
+                                        <p>Shipping Free*</p>
+                                        <span>Pickup fee <?= number_format($pickupFee,0,',','.') ?> VNĐ</span>
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <div class="coupon-area">
+                                        <strong>Mã giảm giá</strong>
+                                        <form method="post">
+                                            <div class="form-inner">
+                                                <input type="text" name="coupon" placeholder="Mã giảm giá...">
+                                                <button type="submit" class="apply-btn">Áp dụng</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </li>
+                                <li>
+                                    <strong>Total</strong>
                                         <p>Vận chuyển</p>
                                         <span>
                                             <?= $shippingFee == 0 
@@ -583,6 +623,52 @@
         </div>
     </div>
   <script>
+document.addEventListener("click", function (e) {
+
+    let minus = e.target.closest(".quantity__minus");
+    let plus  = e.target.closest(".quantity__plus");
+
+    if (!minus && !plus) return;
+
+    e.preventDefault();
+
+    let quantityBox = e.target.closest(".quantity");
+    let input = quantityBox.querySelector(".quantity__input");
+    let value = parseInt(input.value) || 1;
+
+    if (minus && value > 1) value--;
+    if (plus) value++;
+
+    input.value = value;
+
+    // 👉 TOTAL từng sản phẩm
+    let row = e.target.closest("tr");
+    let totalCell = row.querySelector(".item-total");
+    let price = parseInt(totalCell.dataset.price);
+
+    let itemTotal = price * value;
+    totalCell.innerText = itemTotal.toLocaleString("vi-VN") + " VNĐ";
+
+    // 👉 cập nhật localStorage
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    let id = quantityBox.dataset.id;
+    let item = cart.find(p => p.id == id);
+
+    if (item) {
+        item.soLuong = value;
+        localStorage.setItem("cart", JSON.stringify(cart));
+    }
+
+    // 👉 TOTAL toàn bộ giỏ
+    calculateTotal();
+});
+
+// 👉 gọi khi load trang
+calculateTotal();
+
+// TOTAL tất cả SP
+function calculateTotal() {
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
 document.addEventListener("DOMContentLoaded", function () {
 
     document.addEventListener("click", function (e) {
@@ -639,6 +725,8 @@ function calculateTotal() {
         total += item.gia * item.soLuong;
     });
 
+    document.getElementById("cart-total").innerText =
+        total.toLocaleString("vi-VN") + " VNĐ";
     const freeShipMin = 1000000;
     const pickupFee = 10000;
     const shippingFee = total >= freeShipMin ? 0 : pickupFee;

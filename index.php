@@ -24,6 +24,8 @@ switch ($page) {
     case 'detele':
         $controller->deleteproduct();
         break;
+    case 'productDetail':
+        $controller->productDetail($id);
     case 'productdetail':
         $controller->productdetail();
         break;
@@ -36,6 +38,8 @@ switch ($page) {
     case 'update':
         $controller->update();
         break;
+    case "checkout-page":
+        $controller->show_checkout($id);
     case 'apply-coupon':
         $controller->applyCoupon();
         break;

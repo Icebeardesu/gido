@@ -24,6 +24,9 @@ class controller {
         include "./views/main-content-shop.php";
         include "./views/footer.php";
     }
+    public function show_product(){
+        $prod = $this -> model -> getAll();
+    }
     public function addtocart() {
         $id = $_GET['id'] ?? null;
         if (!$id) return;
@@ -53,6 +56,7 @@ class controller {
 
     public function shoppingcart() {
         $products = $_SESSION['cart'] ?? [];
+        include "./views/shoppingcart.php";
         include "./views/header-main-without-home.php";
         include "./views/shoppingcart.php";
         include "./views/footer.php";
@@ -89,6 +93,9 @@ class controller {
         header('Location: index.php?page=shoppingcart'); 
         exit; 
     }
+    public function productcatalog(){
+        include "./views/productcatalog.php";
+    }
     public function productdetail(){
         include "./views/productdetail.php";
     }
@@ -107,6 +114,7 @@ class controller {
     //     $cate = $this -> model -> getAllCategories();
     // }  
 
+   public function productDetail($id = null){
     public function product_detail($id = null){
         if($id === null){
             echo "không có id sản phẩm! ";
@@ -127,6 +135,16 @@ class controller {
     include "views/productdetail.php";
     include "views/footer.php";
     }
+
+    public function order_success() {
+    $id = $_GET["id"];
+    include "./views/checkout-success.php";
+}
+
+    public function show_checkout($id){
+        
+    }
+}
 
     public function applyCoupon(){
         if (!isset($_POST['coupon'])) {

@@ -806,6 +806,8 @@
                         <div class="tab-content" id="v-pills-tabContent2">
                             <div class="tab-pane fade show active" id="v-pills2-img1" role="tabpanel">
                                 <div class="shop-details-tab-img product-img--main" data-scale="1.4"
+                                    data-image="<?= $productdetail['anh'] ?>">
+                                    <img src="<?= $productdetail['anh'] ?>" alt="">
                                     data-image="./assets/image/inner-page/shop-details-tab-img1.jpg">
                                     <img src="assets/image/inner-page/shop-details-tab-img1.jpg" alt="">
                                 </div>
@@ -838,6 +840,7 @@
                                 </div>
                             </div>
                         </div>
+                        <!-- <div class="nav nav-pills" id="v-pills2-tab" role="tablist" aria-orientation="vertical">
                         <div class="nav nav-pills" id="v-pills2-tab" role="tablist" aria-orientation="vertical">
                             <button class="nav-link active" id="v-pills2-img1-tab" data-bs-toggle="pill"
                                 data-bs-target="#v-pills2-img1" type="button" role="tab" aria-controls="v-pills2-img1"
@@ -864,11 +867,13 @@
                                 aria-selected="false">
                                 <img src="assets/image/inner-page/shop-details-nav-img5.png" alt="">
                             </button>
+                        </div> -->
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-6">
                     <div class="shop-details-content">
+                        <h3 class="productdetail_tile"> <?=htmlspecialchars($productdetail['ten_san_pham'] );  ?>  </h3>
                         <h3>Trendy & Comfortable Outerwear</h3>
                         <div class="rating-review">
                             <div class="rating">
@@ -883,6 +888,7 @@
                             </div>
                         </div>
                         <div class="price-area">
+                            <p class="price"> <del>$ 445.00</del><?=htmlspecialchars($productdetail['gia'] );  ?></p>
                             <p class="price"> <del>$ 445.00</del>$ 300.00</p>
                         </div>
                         <div class="quantity-color-area">

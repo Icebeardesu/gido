@@ -35,6 +35,8 @@ class database {
     }
     // SanPhamModel.php
      public function getSanPhamByDanhMuc($idDanhMuc) {
+        $stmt = $this->conn->prepare(
+            "SELECT * FROM san_pham WHERE id_danh_muc = ?"
         $stmt = $this->conn->prepare("SELECT * FROM san_pham WHERE id_danh_muc = ?"
         );
         $stmt->execute([$idDanhMuc]);
@@ -45,6 +47,8 @@ class database {
         $stmt->execute();
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
+    public function getByCode($code){
+        $sql = "SELECT * FROM ma_giam_gia 
     public function showdanhmuc($id) {
         $stmt = $this->conn->prepare("SELECT * FROM danh_muc WHERE id_danh_muc = ?");
         $stmt->execute([$id]);
@@ -56,6 +60,12 @@ class database {
                 AND trang_thai = 1
                 AND ngay_bat_dau <= CURDATE()
                 AND ngay_ket_thuc >= CURDATE()
+                LIMIT 1";
+
+        $stmt = $this->conn->prepare($sql);
+        $stmt->execute([$code]);
+        return $stmt->fetch(PDO::FETCH_ASSOC);
+    }
                 AND don_hang_toi_thieu <= ?
                 AND so_lan_da_dung < so_lan_su_dung
                 LIMIT 1";
