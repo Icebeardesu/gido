@@ -5,8 +5,8 @@
                     <div class="footer-logo-section">
                         <div class="footer-top-section">
                             <div class="footer-logo">
-                                <a href="index.html">
-                                    <img src="assets/image/home1/icon/ethics-footer-logo.svg" alt="">
+                                <a href="index.php">
+                                    <img src="http://localhost/gido/assets/image/logo1.png" alt="" width="150px">
                                 </a>
                             </div>
                             <a class="office-location" href="https://www.google.com/maps">Tổ 1 <br>phường Phan Đình Phùng <br>thành phố Thái Nguyên</a>
