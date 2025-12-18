@@ -29,7 +29,7 @@ if(session_status() === PHP_SESSION_NONE){
                 <li class="menu-item-has-children">
                     <a href="index.php?page=faq">FAQ's</a><i class="bi bi-plus dropdown-icon"></i>
                 </li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="index.php?page=about">About</a></li>
             </ul>
             <div class="d-xl-none d-block">
                 <div class="mobile-search-area mb-30">

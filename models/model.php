@@ -24,11 +24,11 @@ class database {
         $stmt->execute([$id]);
         return $stmt->fetch();
     }
-    public function getTopselling( $ishot=1) {
-        $stmt = $this->conn->prepare("SELECT * FROM san_pham WHERE is_hot = ?");
-        $stmt->execute([$ishot]);
-        return $stmt->fetch(PDO::FETCH_ASSOC);
-    }
+    // public function getTopselling( $ishot=1) {
+    //     $stmt = $this->conn->prepare("SELECT * FROM san_pham WHERE is_hot = ?");
+    //     $stmt->execute([$ishot]);
+    //     return $stmt->fetch(PDO::FETCH_ASSOC);
+    // }
     public function deteleProduct( $id) {
         $stmt = $this->conn->prepare("SELECT * FROM san_pham WHERE id_san_pham = ?");
         $stmt->execute([$id]);

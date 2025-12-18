@@ -18,7 +18,7 @@ switch ($page) {
     case 'addtocart':
         $controller->addtocart();
         break;
-     case 'editCateProducts':
+    case 'editCateProducts':
         $controllerAdmin->editCateProductsF();
         break;
     case 'detele':
@@ -44,6 +44,9 @@ switch ($page) {
         break;
     case 'faq':
         $controller->faq();
+        break;
+    case 'about':
+        $controller->about();
         break;
     default:
     echo "lỗi 404 - không tìm thấy trang này!";
