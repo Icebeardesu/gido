@@ -35,8 +35,11 @@ switch ($page) {
     case 'update':
         $controller->update();
         break;
-    case "checkout-page":
-        $controller->show_checkout($id);
+    // case "checkout-page":
+    //     $controller->show_checkout($id);
+    //     break;
+    case 'faq':
+        $controller->faq();
         break;
     case 'about':
         $controller->about();

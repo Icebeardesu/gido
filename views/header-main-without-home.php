@@ -264,15 +264,10 @@ if(session_status() === PHP_SESSION_NONE){
                     </div>
                 </li>
                 <li class="menu-item-has-children">
-                    <a href="#" class="drop-down"> Category</a><i class="bi bi-plus dropdown-icon"></i>
+                    <a href="index.php?page=productcatalog" class="drop-down"> Category</a><i class="bi bi-plus dropdown-icon"></i>
                 </li>
                 <li class="menu-item-has-children">
-                    <a href="#" class="drop-down"> PAGES</a><i class="bi bi-plus dropdown-icon"></i>
-                    <ul class="sub-menu">
-                        <li><a href="about-us.html">About Us</a></li>
-                        <li><a href="faq.html">FAQ's</a></li>
-                        <li><a href="error.html">Error</a></li>
-                    </ul>
+                    <a href="index.php?page=faq">FAQ's</a>
                 </li>
                 <li><a href="index.php?page=about">About</a></li>
             </ul>
