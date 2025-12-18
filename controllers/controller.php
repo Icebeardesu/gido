@@ -173,7 +173,6 @@ class controller {
         }
 
         $productpayment = $_SESSION['cart'];
-        include "views/checkout.php";
         include_once "./views/checkout-page.php";
         include "./views/footer.php";
     }

@@ -865,7 +865,15 @@
                             <form action="index.php?page=order_success&id=?" method="POST">
                                 <div class="cart-menu">
                                     <div class="cart-body">
+                                        <?php
+                                            $subtotal = 0;
+                                            $shipping = 0;
+                                            ?>
                                         <?php foreach($productpayment as $item): ?>
+                                            <?php
+                                                $lineTotal = $item['gia'] * $item['quantity'];
+                                                $subtotal += $lineTotal;
+                                            ?>
                                         <ul>
                                             <li class="single-item">
                                                 <div class="item-area">
@@ -888,12 +896,13 @@
                                         </ul>
                                         <?php endforeach; ?>
                                     </div>
+                                    <?php $total = $subtotal + $shipping; ?>
                                     <div class="cart-footer">
                                         <div class="pricing-area mb-40">
                                             <ul>
                                                 <li>
                                                     <strong>Tổng phụ</strong>
-                                                    <strong class="price">999</strong>
+                                                    <strong class="price"><?= number_format($subtotal,0,',','.') ?> VNĐ</strong>
                                                 </li>
                                                 <li>
                                                     <strong>Phí vận chuyển</strong>
@@ -904,7 +913,7 @@
                                                 </li>
                                                 <li>
                                                     <strong>Tổng tiền</strong>
-                                                    <strong class=" price">$214.00</strong>
+                                                    <strong class=" price"><?= number_format($total,0,',','.') ?> VNĐ</strong>
                                                 </li>
                                             </ul>
                                         </div>
