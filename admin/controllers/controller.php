@@ -200,8 +200,6 @@ public function userControl(){
     $user = $this->modelAdmin->listUser();
     ob_start();
     include "admin/views/userControl.php";
-    $content = ob_get_clean();
-    include "admin/views/layout.php";
 }
 
 public function addUserForm(){

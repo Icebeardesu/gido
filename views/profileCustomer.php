@@ -6,6 +6,7 @@
     <title>Document</title>
 </head>
 <body>
+    <a href="index.php">Trở về trang chủ</a>
     <h1>Đây là profile</h1>
     <a href="index.php?page=logoutFunction">
         <button>Logout</button>

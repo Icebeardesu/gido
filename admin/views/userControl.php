@@ -5,7 +5,8 @@
     <title>Quản lý khách hàng</title>
 
     <!-- Bootstrap (nếu m đã có rồi thì bỏ dòng này cũng được) -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
 
     <style>
         body {
@@ -89,9 +90,91 @@
                 gap: 10px;
             }
         }
+
+        body {
+      background: linear-gradient(135deg, #f5f7fa, #e4ecf7);
+      font-family: 'Segoe UI', system-ui, sans-serif;
+    }
+
+    .admin-navbar {
+      background: linear-gradient(90deg, #0d6efd, #0b5ed7);
+      box-shadow: 0 4px 20px rgba(0,0,0,.12);
+    }
+
+    .admin-navbar .nav-link {
+      color: rgba(255,255,255,.9) !important;
+      font-weight: 500;
+      padding: 10px 16px;
+      border-radius: 8px;
+      margin-right: 6px;
+      transition: .2s;
+    }
+
+    .admin-navbar .nav-link:hover,
+    .admin-navbar .nav-link.active {
+      background: rgba(255,255,255,.2);
+      color: #fff !important;
+    }
+
+    .card {
+      border-radius: 18px;
+      border: none;
+    }
+
+    .table th,
+    .table td {
+      vertical-align: middle !important;
+    }
+
+    .text-limit {
+      max-width: 260px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
     </style>
 </head>
 <body>
+
+        <nav class="navbar navbar-expand-lg admin-navbar px-4">
+  <a class="navbar-brand text-white fw-bold" href="admin.php?pageAdmin=dashboard">
+    ⚙️ Admin Panel
+  </a>
+
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#adminMenu">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="adminMenu">
+    <ul class="navbar-nav ms-4">
+
+      <li class="nav-item">
+        <a class="nav-link" href="admin.php?pageAdmin=dashboard">
+          <i class="bi bi-speedometer2 me-1"></i> Dashboard
+        </a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link active" href="admin.php?pageAdmin=show_product_control">
+          <i class="bi bi-box-seam me-1"></i> Quản lý sản phẩm
+        </a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="admin.php?pageAdmin=cateProducts">
+          <i class="bi bi-folder2-open me-1"></i> Quản lý danh mục
+        </a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="admin.php?pageAdmin=userControl">
+          <i class="bi bi-people me-1"></i> Quản lý khách hàng
+        </a>
+      </li>
+
+    </ul>
+  </div>
+</nav>
 
 <div class="container-fluid">
     <div class="row">
