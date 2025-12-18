@@ -1,17 +1,9 @@
 <?php
-session_start();
 require_once "admin/controllers/controller.php";
 $controllerAdmin = new controllerAdmin();
 
 $pageAdmin = $_GET['pageAdmin'] ?? 'dashboard';
 $idAdmin = $_GET['idAdmin'] ?? null;
-
-$publicPages = ['loginAdmin', 'loginAdminFunction'];
-
-if (!isset($_SESSION['admin']) && !in_array($pageAdmin, $publicPages)) {
-    header('Location: admin.php');
-    exit;
-}
 switch ($pageAdmin) {
     case 'loginAdmin':
         $controllerAdmin->loginAdminPage();
@@ -58,30 +50,6 @@ switch ($pageAdmin) {
         break;
     case 'edit_cateProducts':
         $controllerAdmin->editCateProductsHandle();
-        break;
-    case 'userControl':
-        $controllerAdmin->userControl();
-        break;
-    case 'addUserForm':
-        $controllerAdmin->addUserForm();
-        break;
-    case "addUser":
-        $controllerAdmin->addUser();
-        break;
-    case "deleteUser":
-        $controllerAdmin->deleteUser($idAdmin);
-        break;
-    case "editUserForm":
-        $controllerAdmin->editUserForm($idAdmin);
-        break;
-    case "editUser":
-        $controllerAdmin->editUser($idAdmin);
-        break;
-    case "loginAdminFunction":
-        $controllerAdmin->loginAdmin();
-        break;
-    case "logoutAdmin":
-        $controllerAdmin->logoutAdmin();
         break;
     default:
     echo "lỗi 404 - không tìm thấy trang này!";

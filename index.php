@@ -25,7 +25,7 @@ switch ($page) {
         $controller->deleteproduct();
         break;
     case 'productDetail':
-        $controller->productDetail($id);
+        $controller->product_detail($id);
         break;
     case 'productcatalog':
         $controller->productcatalog();

@@ -91,9 +91,6 @@ class controller {
         header('Location: index.php?page=shoppingcart'); 
         exit; 
     }
-    public function productdetail(){
-        include "./views/productdetail.php";
-    }
     public function productcatalog() {
     $id = $_GET['id_danh_muc'] ?? null;
     $products = $this->model->getSanPhamByDanhMuc($id);

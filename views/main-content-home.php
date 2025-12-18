@@ -107,13 +107,8 @@
                                 <div class="categorie-card style-2">
                                     
                                     <div class="categorice-image">
-<<<<<<< HEAD
                                         <a href="index.php?page=productcatalog&id_danh_muc=<?= $item['id_danh_muc'] ?>">
                                             <img src="<?= $item['anh_dai_dien'] ?>" alt="">
-=======
-                                        <a href="index.php?page=productcatalog">
-                                            <img src="<?php echo $category['anh_dai_dien'] ?>" alt="">
->>>>>>> 8f91eedf1fa5f7a53989e46b98864760b96c2b3f
                                         </a>
                                     </div>
                                     <div class="categorice-content text-center">
@@ -152,12 +147,13 @@
                             <div class="col-lg-6 col-md-6 col-sm-6 wow animate fadeInDown" data-wow-delay="200ms" data-wow-duration="1500ms">
                                 <div class="product-card">
                                     <div class="product-card-img">
-                                        <a href="product-details.html">
+                                        <a href="index.php?page=productDetail&id=<?= $item['id_san_pham'] ?>">
                                             <img src="<?= $item['anh'] ?>" alt="">
                                         </a>
                                         <div class="batch">
                                             <span class="style-3">New</span>
                                         </div>
+                                        
                                         <div class="overlay">
                                             <div class="cart-area">
                                                 <a class="add-cart-btn" href="cart-page.html"><i class="bi bi-bag-check"></i>
@@ -204,7 +200,7 @@
                                                 <li class="style-2"><i class="bi bi-star-fill"></i></li>
                                             </ul>
                                         </div>
-                                        <h6><a class="hover-underline" href="product-details.html"><?= $item['ten_san_pham']; ?></a>
+                                        <h6><a class="hover-underline" href="index.php?page=productDetail&id=<?= $item['id_san_pham'] ?>"> <?php echo $item['ten_san_pham']; ?> </a>
                                         </h6>
                                         <p class="price"><?= $item['gia']; ?></p>
                                     </div>
@@ -320,7 +316,7 @@
                                                 <li><i class="bi bi-star-fill"></i></li>
                                             </ul>
                                         </div>
-                                        <h6><a class="hover-underline" href="product-details.html"><?= $piece['ten_san_pham']; ?></a></h6>
+                                        <h6><a class="hover-underline" href="index.php?page=productDetail&id=<?= $piece['id_san_pham'] ?>"><?= $piece['ten_san_pham']; ?></a></h6>
                                         <p class="price"><del>$345.00</del> <?= $piece['gia']; ?> </p>
                                     </div>
                                 </div>
