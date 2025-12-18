@@ -97,6 +97,7 @@
                             <div class="col-lg-6">
                                 <div class="shop-details-content">
                                     <h3></h3>
+                                    <h3>Trendy & Comfortable Outerwear</h3>
                                     <div class="rating-review">
                                         <div class="rating">
                                             <div class="star">
@@ -516,6 +517,7 @@
                                             <div class="product-card-img">
                                                 <a href="index.php?page=productDetail&id=<?= $item['id_san_pham'] ?>">
                                                     <img src="<?=$item['anh']; ?>" alt="">
+                                                    <img src="./assets/image/products/<?php echo $item['anh']; ?>" alt="">
                                                 </a>
                                                 <div class="overlay">
                                                     <div class="cart-area">
@@ -710,6 +712,111 @@
                                     });
                                 });
                         </script>
+                            document.addEventListener("DOMContentLoaded", function () {
+
+                                const products = Array.from(document.querySelectorAll('.product-item'));
+                                const checkboxes = document.querySelectorAll('.filter-category');
+                                const searchInput = document.getElementById('searchInput');
+                                const pagination = document.getElementById('pagination');
+                                const prevBtn = document.getElementById('prevPage');
+                                const nextBtn = document.getElementById('nextPage');
+
+                                const ITEMS_PER_PAGE = 9;
+                                let currentPage = 1;
+                                let filteredProducts = [...products];
+
+                                /* ===== FILTER ===== */
+                                function filterProducts() {
+                                    const keyword = searchInput.value.toLowerCase();
+                                    const selectedCategory = Array.from(checkboxes).find(cb => cb.checked)?.value;
+
+                                    filteredProducts = products.filter(product => {
+                                        const name = product.dataset.name.toLowerCase();
+                                        const category = product.dataset.category;
+
+                                        const matchName = name.includes(keyword);
+                                        const matchCategory = !selectedCategory || category === selectedCategory;
+
+                                        return matchName && matchCategory;
+                                    });
+
+                                    currentPage = 1;
+                                    renderProducts();
+                                    renderPagination();
+                                }
+
+                                /* ===== RENDER PRODUCT ===== */
+                                function renderProducts() {
+                                    products.forEach(p => p.style.display = 'none');
+
+                                    const start = (currentPage - 1) * ITEMS_PER_PAGE;
+                                    const end = start + ITEMS_PER_PAGE;
+
+                                    filteredProducts.slice(start, end).forEach(p => {
+                                        p.style.display = 'block';
+                                    });
+                                }
+
+                                /* ===== PAGINATION ===== */
+                                function renderPagination() {
+                                    pagination.innerHTML = '';
+                                    const totalPages = Math.ceil(filteredProducts.length / ITEMS_PER_PAGE);
+
+                                    prevBtn.disabled = currentPage === 1;
+                                    nextBtn.disabled = currentPage === totalPages || totalPages === 0;
+
+                                    if (totalPages <= 1) return;
+
+                                    for (let i = 1; i <= totalPages; i++) {
+                                        const li = document.createElement('li');
+                                        li.className = i === currentPage ? 'active' : '';
+
+                                        const btn = document.createElement('button');
+                                        btn.type = 'button';
+                                        btn.innerText = i < 10 ? `0${i}` : i;
+
+                                        btn.onclick = () => {
+                                            currentPage = i;
+                                            renderProducts();
+                                            renderPagination();
+                                        };
+
+                                        li.appendChild(btn);
+                                        pagination.appendChild(li);
+                                    }
+                                }
+
+                                /* ===== EVENTS ===== */
+                                searchInput.addEventListener('input', filterProducts);
+                                checkboxes.forEach(cb => {
+                                    cb.addEventListener('change', function () {
+                                        checkboxes.forEach(o => o !== this && (o.checked = false));
+                                        filterProducts();
+                                    });
+                                });
+
+                                prevBtn.onclick = () => {
+                                    if (currentPage > 1) {
+                                        currentPage--;
+                                        renderProducts();
+                                        renderPagination();
+                                    }
+                                };
+
+                                nextBtn.onclick = () => {
+                                    const totalPages = Math.ceil(filteredProducts.length / ITEMS_PER_PAGE);
+                                    if (currentPage < totalPages) {
+                                        currentPage++;
+                                        renderProducts();
+                                        renderPagination();
+                                    }
+                                };
+
+                                /* ===== INIT ===== */
+                                filterProducts();
+                            });
+                        </script>
+
                         <div class="row wow animate fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms">
                             <div class="col-lg-12">
                                 <div class="page-navigation-area d-flex flex-wrap align-items-center justify-content-between">
@@ -766,3 +873,4 @@
             </div>
         </div>
     </div>
+    

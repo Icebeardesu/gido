@@ -273,6 +273,7 @@ if(session_status() === PHP_SESSION_NONE){
                         <li><a href="faq.html">FAQ's</a></li>
                         <li><a href="error.html">Error</a></li>
                     </ul>
+                    <a href="index.php?page=faq">FAQ's</a><i class="bi bi-plus dropdown-icon"></i>
                 </li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>

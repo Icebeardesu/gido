@@ -8,6 +8,10 @@ class controller {
     }
 
     public function home(){
+        $products = $this->model->getAll();
+        $category= $this->model->getAllCategories();
+        $products = $this->model->getAll();
+        // $topSelling = $this->model->getTopselling(1);
         include "./views/main-content-home.php";
         include "./views/footer.php";
     }
@@ -53,6 +57,9 @@ class controller {
     public function shoppingcart() {
         $products = $_SESSION['cart'] ?? [];
         include "./views/shoppingcart.php";
+        include "./views/header-main-without-home.php";
+        include "./views/shoppingcart.php";
+        include "./views/footer.php";
     }
 
     public function delete() {
@@ -89,11 +96,26 @@ class controller {
     public function productcatalog(){
         include "./views/productcatalog.php";
     }
+    public function productdetail(){
+        include "./views/productdetail.php";
+    }
+    public function productcatalog() {
+    $id = $_GET['id_danh_muc'] ?? null;
+    $products = $this->model->getSanPhamByDanhMuc($id);
+    $showCategory = $this->model->showdanhmuc($id);
+    $category = $this->model->getAllCategories();
+    include "./views/header-main-without-home.php";
+    include "./views/productcatalog.php";
+    include "./views/footer.php";
+    }
+
+
     // public function show_category(){
     //     $cate = $this -> model -> getAllCategories();
     // }  
 
    public function productDetail($id = null){
+    public function product_detail($id = null){
         if($id === null){
             echo "không có id sản phẩm! ";
             exit;
@@ -102,6 +124,11 @@ class controller {
         $productdetail = $this->model->getProductByID($id);
         
         // Thêm dòng này để debug
+        if(!$productdetail){
+            echo "Không tìm thấy sản phẩm với ID: " . $id;
+            var_dump($productdetail);
+            exit;
+        }
     
     // Truyền biến vào view
     include "views/header-main-without-home.php";
@@ -119,4 +146,43 @@ class controller {
     }
 }
 
+    public function applyCoupon(){
+        if (!isset($_POST['coupon'])) {
+            header('Location: index.php?page=shoppingcart');
+            exit;
+        }
+
+        $code = strtoupper(trim($_POST['coupon']));
+        $cartTotal = $_SESSION['cart_total'] ?? 0;
+
+        $coupon = $this->model->getByCode($code, $cartTotal);
+
+        if (!$coupon) {
+            $_SESSION['coupon_error'] = 'Mã giảm giá không hợp lệ hoặc không đủ điều kiện';
+            header('Location: index.php?page=shoppingcart');
+            exit;
+        }
+
+        $_SESSION['coupon'] = $coupon;
+        unset($_SESSION['coupon_error']);
+
+        header('Location: index.php?page=shoppingcart');
+        exit;
+    }
+
+    public function removeCoupon()
+    {
+        unset($_SESSION['coupon']);
+        unset($_SESSION['coupon_error']);
+
+        header('Location: index.php?page=shoppingcart');
+        exit;
+    }
+
+    public function faq(){
+        include "./views/header-main-without-home.php";
+        include "./views/faq.php";
+        include "./views/footer.php";
+    }
+}
 ?>
