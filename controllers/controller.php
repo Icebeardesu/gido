@@ -176,5 +176,67 @@ class controller {
         include_once "./views/checkout-page.php";
         include "./views/footer.php";
     }
+    public function orderProduct(){
+        include "./views/checkout-success.php";
+    }
+    public function store() {
+        session_start();
+        $cart = $_SESSION['cart'] ?? [];
+        if(empty($cart)) {
+            header('Location: index.php?page=cart');
+            exit();
+        }
+
+        $subtotal = $_POST['subtotal'] ?? 0;
+        $shipping = $_POST['shipping'] ?? 0;
+        $discount = $_POST['discount'] ?? 0;
+
+        $data = [
+            'id_nguoi_dung' => $_SESSION['user_id'] ?? 0,
+            'customer_name' => $_POST['full_name'] ?? '',
+            'phone' => $_POST['phone'] ?? '',
+            'email' => $_POST['email'] ?? '',
+            'address' => $_POST['address'] ?? '',
+            'note' => $_POST['note'] ?? '',
+            'tong_tien' => $subtotal,
+            'phi_giao_hang' => $shipping,
+            'giam_gia' => $discount,
+            'thanh_toan' => $subtotal + $shipping - $discount,
+            'phuong_thuc' => $_POST['payment_method'] ?? 1
+        ];
+
+        $orderId = $this->model->create($data);
+
+        foreach($cart as $item) {
+            $this->model->insertItem($orderId, $item);
+        }
+
+        unset($_SESSION['cart']);
+
+        header("Location: index.php?page=order_success&id=$orderId");
+        exit();
+    }
+
+    // Hiển thị trang thành công
+    public function detail($id)
+{
+    if (!$id) {
+        header('Location: index.php');
+        exit();
+    }
+
+    $order = $this->model->showHoaDon($id);
+    $items = $this->model->getByHoaDon($id);
+
+    // 🔴 QUAN TRỌNG
+    if (!$order) {
+        echo "<h3>Hóa đơn không tồn tại hoặc đã bị xóa</h3>";
+        exit();
+    }
+
+    require 'views/checkout-success.php';
+}
+
+
 }
 ?>

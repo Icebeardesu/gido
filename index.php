@@ -47,6 +47,21 @@ switch ($page) {
         break;
     case 'checkout':
         $controller->checkout();
+        break;
+    case 'order_success':
+        $controller->orderProduct();
+        break;
+    case 'store':              // Khi form gửi về đây
+        $controller->store();
+        break;
+    case 'order_success':
+        $id = $_GET['id'] ?? null;
+        if($id) {
+            $controller->detail($id);
+        } else {
+            header('Location: index.php');
+        }
+    break;
     default:
     echo "lỗi 404 - không tìm thấy trang này!";
     break;

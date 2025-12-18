@@ -796,161 +796,228 @@
     <!-- breadcrumb section ends here -->
     <!-- checkout section strats here -->
     <div class="checkout-section mb-100">
-        <div class="container">
-            <div class="row g-lg-4 gy-5">
-                <div class="col-xl-7 col-lg-8">
-                    <div class="enquery-section">
-                        <div class="checkout-form-title">
-                            <h4>Thông tin thanh toán</h4>
-                        </div>
-                        <div class="enquery-form-wrapper style-3">
-                            <form>
-                                <div class="row">
-                                    <div class="col-md-6 mb-30">
-                                        <div class="form-inner">
-                                            <label>Tên đầy đủ</label>
-                                            <input type="text" placeholder="Nhập họ tên đầy đủ">
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6 mb-30">
-                                        <div class="form-inner">
-                                            <label>Số điện thoại</label>
-                                            <input type="text" placeholder="(84)+ 123 456 789">
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6 mb-30">
-                                        <div class="form-inner">
-                                            <label>Địa chỉ Email</label>
-                                            <input type="email" placeholder="abc@gmail.com">
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6 mb-30">
-                                        <div class="form-inner">
-                                            <label>Địa chỉ<span>*</span></label>
-                                            <input type="text" placeholder="Nơi nhận hàng">
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6 mb-30">
-                                        <div class="form-inner">
-                                            <label>Mã bưu điện<span>*</span></label>
-                                            <input type="email" placeholder="Mã bưu chính">
-                                        </div>
-                                    </div>
-                                    <div class="col-md-12 mb-15">
-                                        <div class="form-inner">
-                                            <label>mô tả<span>*</span></label>
-                                            <textarea placeholder="Văn bản của bạn ở đây"></textarea>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-12 mb-25">
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" value=""
-                                                id="contactCheck">
-                                            <label class="form-check-label" for="contactCheck">
-                                                Làm ơn lưu lại <span> tên và địa chỉ</span>
-                                            </label>
-                                        </div>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
+    <div class="container">
+
+        <!-- ===== 1 FORM DUY NHẤT ===== -->
+        <form action="index.php?page=store" method="POST">
+
+        <div class="row g-lg-4 gy-5">
+
+            <!-- ================= THÔNG TIN THANH TOÁN ================= -->
+            <div class="col-xl-7 col-lg-8">
+                <div class="enquery-section">
+                    <div class="checkout-form-title">
+                        <h4>Thông tin thanh toán</h4>
                     </div>
-                </div>
-                <div class="col-xl-5 col-lg-4"> 
-                    <div class="checkout-form-wrapper">
-                        <div class="checkout-form-title">
-                            <h4>Chi tiết đơn hàng</h4>
-                        </div>
-                        <div class="order-sum-area">
-                            <form action="index.php?page=order_success&id=?" method="POST">
-                                <div class="cart-menu">
-                                    <div class="cart-body">
-                                        <?php
-                                            $subtotal = 0;
-                                            $shipping = 0;
-                                            ?>
-                                        <?php foreach($productpayment as $item): ?>
-                                            <?php
-                                                $lineTotal = $item['gia'] * $item['quantity'];
-                                                $subtotal += $lineTotal;
-                                            ?>
-                                        <ul>
-                                            <li class="single-item">
-                                                <div class="item-area">
-                                                    <div class="main-item">
-                                                        <div class="item-img">
-                                                           <a href="product-details.html"> <img src="assets/image/products/<?= $item['anh']  ?> "alt=""></a>
-                                                           <div class="close-btn">
-                                                                <i class="bi bi-x"></i>
-                                                           </div>
-                                                        </div>
-                                                        <div class="content-and-quantity">
-                                                            <div class="content">
-                                                                <h6><a href="product-details.html"><?= $item['ten_san_pham'] ?></a></h6>
-                                                                <span><?= number_format($item['gia'],0,',','.') ?> VNĐ</span>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                        </ul>
-                                        <?php endforeach; ?>
-                                    </div>
-                                    <?php $total = $subtotal + $shipping; ?>
-                                    <div class="cart-footer">
-                                        <div class="pricing-area mb-40">
-                                            <ul>
-                                                <li>
-                                                    <strong>Tổng phụ</strong>
-                                                    <strong class="price"><?= number_format($subtotal,0,',','.') ?> VNĐ</strong>
-                                                </li>
-                                                <li>
-                                                    <strong>Phí vận chuyển</strong>
-                                                    <div class="order-info">
-                                                        <p>Shipping Free*</p>
-                                                        <span> Pickup fee $10.00</span>
-                                                    </div>
-                                                </li>
-                                                <li>
-                                                    <strong>Tổng tiền</strong>
-                                                    <strong class=" price"><?= number_format($total,0,',','.') ?> VNĐ</strong>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div class="payment-method-area">
-                                            <h6>Phương thức thanh toán</h6>
-                                            <ul class="payment-list">
-                                                <li class="cash-delivery active">
-                                                    <div class="payment-check">
-                                                        <h6>Trả tiền trực tiếp</h6>
-                                                    </div>
-                                                    <div class="checked">
-                                                    </div>
-                                                </li>
-                                                <li class="stripe">
-                                                    <h6>Chuyển khoản ngân hàng</h6>
-                                                    <div class="checked">
-                                                    </div>
-                                                </li>
-                                            </ul>
-                                            <div class="choose-payment-method pt-25" id="strip-payment" style="display: none;">
-                                                <div class="row g-4">
-                                                    <img src="assets/image/QR_productpayment.jpg" alt="">
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <button type="submit" class="primary-btn">
-                                            Đặt hàng
-                                        </button>
-                                    </div>
+
+                    <div class="enquery-form-wrapper style-3">
+                        <div class="row">
+
+                            <div class="col-md-6 mb-30">
+                                <div class="form-inner">
+                                    <label>Tên đầy đủ</label>
+                                    <input type="text" name="full_name" placeholder="Nhập họ tên đầy đủ" required>
                                 </div>
-                            </form>
+                            </div>
+
+                            <div class="col-md-6 mb-30">
+                                <div class="form-inner">
+                                    <label>Số điện thoại</label>
+                                    <input type="text" name="phone" placeholder="(84)+ 123 456 789" required>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6 mb-30">
+                                <div class="form-inner">
+                                    <label>Địa chỉ Email</label>
+                                    <input type="email" name="email" placeholder="abc@gmail.com">
+                                </div>
+                            </div>
+
+                            <div class="col-md-6 mb-30">
+                                <div class="form-inner">
+                                    <label>Địa chỉ<span>*</span></label>
+                                    <input type="text" name="address" placeholder="Nơi nhận hàng" required>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6 mb-30">
+                                <div class="form-inner">
+                                    <label>Mã bưu điện</label>
+                                    <input type="text" name="zipcode" placeholder="Mã bưu chính">
+                                </div>
+                            </div>
+
+                            <div class="col-md-12 mb-15">
+                                <div class="form-inner">
+                                    <label>Mô tả</label>
+                                    <textarea name="note" placeholder="Văn bản của bạn ở đây"></textarea>
+                                </div>
+                            </div>
+
+                            <div class="col-md-12 mb-25">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="contactCheck">
+                                    <label class="form-check-label" for="contactCheck">
+                                        Làm ơn lưu lại <span>tên và địa chỉ</span>
+                                    </label>
+                                </div>
+                            </div>
+
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+
+            <!-- ================= CHI TIẾT ĐƠN HÀNG ================= -->
+            <div class="col-xl-5 col-lg-4">
+                <div class="checkout-form-wrapper">
+                    <div class="checkout-form-title">
+                        <h4>Chi tiết đơn hàng</h4>
+                    </div>
+
+                    <div class="order-sum-area">
+                        <div class="cart-menu">
+                            <div class="cart-body">
+
+                                <?php
+                                    $subtotal = 0;
+                                    $shipping = isset($shippingFee) ? $shippingFee : 0;
+                                    $discount = isset($_SESSION['discount']) ? $_SESSION['discount'] : 0;
+
+                                    foreach($productpayment as $item):
+                                        $lineTotal = $item['gia'] * $item['quantity'];
+                                        $subtotal += $lineTotal;
+                                ?>
+                                <ul>
+                                    <li class="single-item">
+                                        <div class="item-area">
+                                            <div class="main-item">
+                                                <div class="item-img">
+                                                    <img src="assets/image/products/<?= $item['anh'] ?>" alt="">
+                                                </div>
+                                                <div class="content-and-quantity">
+                                                    <div class="content">
+                                                        <h6><?= $item['ten_san_pham'] ?></h6>
+                                                        <span><?= number_format($item['gia'],0,',','.') ?> VNĐ</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <?php endforeach; ?>
+
+                            </div>
+
+                            <?php $total = $subtotal + $shipping; ?>
+
+                            <div class="cart-footer">
+                                <div class="pricing-area mb-40">
+                                    <ul>
+                                        <li>
+                                            <strong>Tổng phụ</strong>
+                                            <strong><?= number_format($subtotal,0,',','.') ?> VNĐ</strong>
+                                        </li>
+                                        <li>
+                                            <strong>Phí vận chuyển</strong>
+                                            <span><?= $shipping == 0 ? 'Miễn phí' : number_format($shipping,0,',','.').' VNĐ' ?></span>
+                                        </li>
+                                        <li>
+                                            <strong>Tổng tiền</strong>
+                                            <strong><?= number_format($total,0,',','.') ?> VNĐ</strong>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <!-- gửi tiền về PHP -->
+                                <input type="hidden" name="subtotal" value="<?= $subtotal ?>">
+                                <input type="hidden" name="shipping" value="<?= $shipping ?>">
+                                <input type="hidden" name="discount" value="<?= $discount ?>">
+                                <input type="hidden" name="total" value="<?= $total ?>">
+
+                                <div class="payment-method-area">
+    <div class="payment-method-area">
+    <h6>Phương thức thanh toán</h6>
+
+    <ul class="payment-list">
+        <li>
+            <label>
+                <input type="radio"
+                       name="payment_method"
+                       value="1"
+                       required>
+                Trả tiền trực tiếp
+            </label>
+        </li>
+
+        <li>
+            <label>
+                <input type="radio"
+                       name="payment_method"
+                       value="2">
+                Chuyển khoản ngân hàng
+            </label>
+        </li>
+    </ul>
+
+    <div class="choose-payment-method pt-25"
+         id="strip-payment"
+         style="display:none;">
+        <img src="assets/image/QR_productpayment.jpg" alt="QR Thanh toán">
     </div>
+</div>
+
+
+
+                                <!-- ❌ KHÔNG bọc <a> -->
+                                <button type="submit" class="primary-btn">
+                                    Đặt hàng
+                                </button>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        </form>
+        <!-- ===== END FORM ===== -->
+
+    </div>
+</div>
+
+    <script>
+function togglePayment(type) {
+    const qrSection = document.getElementById('strip-payment');
+    const paymentItems = document.querySelectorAll('.payment-list li');
+    
+    paymentItems.forEach(li => li.classList.remove('active'));
+    
+    if (type === 'bank') {
+        qrSection.style.display = 'block';
+        document.querySelector('.stripe').classList.add('active');
+    } else {
+        qrSection.style.display = 'none';
+        document.querySelector('.cash-delivery').classList.add('active');
+    }
+}
+document.addEventListener("DOMContentLoaded", function () {
+    const radios = document.querySelectorAll('input[name="payment_method"]');
+    const qrBox = document.getElementById('strip-payment');
+
+    radios.forEach(radio => {
+        radio.addEventListener('change', function () {
+            if (this.value === "2") {
+                qrBox.style.display = "block"; // hiện QR
+            } else {
+                qrBox.style.display = "none";  // ẩn QR
+            }
+        });
+    });
+});
+</script>
     <!-- checkout section ends here -->
     <!-- footer section strats here -->
     <footer class="fooeter-section">

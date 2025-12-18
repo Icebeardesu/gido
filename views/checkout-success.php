@@ -1,27 +1,45 @@
-<?php
-// $order và $items đã được truyền từ Controller
-?>
+<div class="checkout-success container">
+    <h4>Mã đơn hàng: <?= htmlspecialchars($order['id']) ?></h4>
+    <p>Khách hàng: <?= htmlspecialchars($order['customer_name']) ?></p>
+    <p>Điện thoại: <?= htmlspecialchars($order['phone']) ?></p>
+    <p>Email: <?= htmlspecialchars($order['email']) ?></p>
+    <p>Địa chỉ: <?= htmlspecialchars($order['address']) ?></p>
+    <p>Ghi chú: <?= htmlspecialchars($order['note']) ?></p>
+    <p>Phương thức: <?= $order['phuong_thuc'] == 1 ? 'Tiền mặt' : 'Chuyển khoản' ?></p>
+    <p>Trạng thái: <?= htmlspecialchars($order['status']) ?></p>
 
-<div class="checkout-success container" style="margin-top:40px; margin-bottom:40px;">
-    <div class="text-center mb-4">
-        <p>Cảm ơn bạn đã đặt hàng tại cửa hàng của chúng tôi.</p>
-        <h4>Mã đơn hàng: </h4>
-    </div>
+    <h4>Chi tiết sản phẩm</h4>
+    <table>
+        <thead>
+            <tr>
+                <th>Sản phẩm</th>
+                <th>Đơn giá</th>
+                <th>Số lượng</th>
+                <th>Thành tiền</th>
+            </tr>
+        </thead>
+        <tbody>
+        <?php 
+        $total = 0;
+        foreach($items as $item):
+            $subtotal = $item['price'] * $item['quantity'];
+            $total += $subtotal;
+        ?>
+            <tr>
+                <td><?= htmlspecialchars($item['ten_san_pham']) ?></td>
+                <td><?= number_format($item['price']) ?>₫</td>
+                <td><?= $item['quantity'] ?></td>
+                <td><?= number_format($subtotal) ?>₫</td>
+            </tr>
+        <?php endforeach; ?>
+        </tbody>
+        <tfoot>
+            <tr>
+                <th colspan="3">Tổng đơn hàng:</th>
+                <th><?= number_format($total) ?>₫</th>
+            </tr>
+        </tfoot>
+    </table>
 
-    <div class="order-info p-4">
-        <h4>Thông tin khách hàng</h4>
-        <p><strong>Họ tên:</p>
-        <p><strong>Số điện thoại:</p>
-        <p><strong>Email:</p>
-        <p><strong>Địa chỉ:</p>
-        <p><strong>Ghi chú:</p>
-        <p><strong>Phương thức thanh toán:</strong></p>
-        <p><strong>Trạng thái</strong></p>
-
-    </div>
-    <h4 class="mt-4">Chi tiết sản phẩm đã đặt</h4>
-
-    <div class="text-center mt-4">
-        <a href="index.php" class="btn btn-primary">Tiếp tục mua sắm</a>
-    </div>
+    <a href="index.php" class="btn btn-primary">Tiếp tục mua sắm</a>
 </div>
