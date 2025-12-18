@@ -70,6 +70,16 @@ class database {
         $stmt->execute([$code, $cartTotal]);
         return $stmt->fetch(PDO::FETCH_ASSOC);
     }
-
+    public function register($id, $ten, $email, $passwordHash){
+        $stmt = $this->conn->prepare("insert into nguoi_dung(id_nguoi_dung, ten_nguoi_dung, email, mat_khau) values(?, ?, ?, ?)");
+        return $stmt->execute([$id, $ten, $email, $passwordHash]);
+    }
+    public function getUserByEmail($email){
+    $stmt = $this->conn->prepare(
+        "SELECT * FROM nguoi_dung WHERE email = ? LIMIT 1"
+    );
+    $stmt->execute([$email]);
+    return $stmt->fetch();
+    }
 }
 ?>
