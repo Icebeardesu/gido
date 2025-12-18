@@ -738,7 +738,7 @@
     </div>
     <!-- product-card section ends here -->
     <!-- footer top section strats here -->
-    <div class="footer-top-area">
+    <!-- <div class="footer-top-area">
         <div class="container">
             <div class="footer-top-wrapper">
                 <div class="row">
@@ -765,4 +765,4 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->

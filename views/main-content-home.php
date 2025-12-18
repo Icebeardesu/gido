@@ -102,26 +102,28 @@
                 <div class="col-lg-12 position-relative">
                     <div class="swiper home5-categori-swipe">
                         <div class="swiper-wrapper">
-                            <?php
-                            $categories = $this->model->getAllCategories();                              
-                            foreach ($categories as $category): ?>
+                            <?php foreach ($category as $item): ?>
                             <div class="swiper-slide">
-                                <div class="categorie-card style-2">                                    
+                                <div class="categorie-card style-2">
+                                    
                                     <div class="categorice-image">
-                                        <a href="index.php?page=productcatalog">
-                                            <img src="<?php echo $category['anh_dai_dien'] ?>" alt="">
+                                        <a href="index.php?page=productcatalog&id_danh_muc=<?= $item['id_danh_muc'] ?>">
+                                            <img src="<?= $item['anh_dai_dien'] ?>" alt="">
                                         </a>
                                     </div>
                                     <div class="categorice-content text-center">
-                                        <h6><a href="index.php?page=productcatalog"><?=$category['ten_danh_muc'] ?></a></h6>
-                                    </div>                                    
+                                        <h6><a href="index.php?page=productcatalog"><?= $item['ten_danh_muc'] ?></a></h6>
+                                    </div>
+                                    
                                 </div>
                             </div>
                             <?php endforeach; ?>
-                        </div>                       
-                    </div>               
+                        </div>
+                    </div>
+                    
                 </div>
-            </div>           
+            </div>
+            
         </div>
     </div>
     <!-- categories section ends here -->
@@ -171,7 +173,7 @@
                                                         </svg>
                                                     </a>
                                                 </li>
-                                                <li>
+                                                <!-- <li>
                                                     <a data-bs-toggle="modal" data-bs-target="#product-view">
                                                         <svg xmlns="http://www.w3.org/2000/svg" width="22"
                                                             height="22" viewBox="0 0 22 22">
@@ -183,7 +185,7 @@
                                                             </path>
                                                         </svg>
                                                     </a>
-                                                </li>
+                                                </li> -->
                                             </ul>
                                         </div>
                                     </div>
@@ -286,7 +288,7 @@
                                                         </svg>
                                                     </a>
                                                 </li>
-                                                <li>
+                                                <!-- <li>
                                                     <a data-bs-toggle="modal" data-bs-target="#product-view">
                                                         <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22"
                                                             viewBox="0 0 22 22">
@@ -298,7 +300,7 @@
                                                             </path>
                                                         </svg>
                                                     </a>
-                                                </li>
+                                                </li> -->
                                             </ul>
                                         </div>
                                     </div>
@@ -472,6 +474,8 @@
                 <div class="modal-body">
                     <div class="close-btn" data-bs-dismiss="modal">
                     </div>
+<!-- ==================================================================================================================================================== -->
+                    
                     <div class="shop-details-top-section">
                         <div class="row g-4">
                             <div class="col-lg-6">
@@ -479,65 +483,15 @@
                                     <div class="tab-content" id="v-pills-tabContent">
                                         <div class="tab-pane fade show active" id="v-pills-img1" role="tabpanel">
                                             <div class="shop-details-tab-img">
-                                                <img src="assets/image/inner-page/shop-details-tab-img1.jpg" alt="">
+                                                <img src="<?= $showprodModal['anh'] ?>" alt="">
                                             </div>
                                         </div>
-                                        <div class="tab-pane fade" id="v-pills-img2" role="tabpanel">
-                                            <div class="shop-details-tab-img">
-                                                <img src="assets/image/inner-page/shop-details-tab-img2.jpg" alt="">
-                                            </div>
-                                        </div>
-                                        <div class="tab-pane fade" id="v-pills-img3" role="tabpanel"
-                                            aria-labelledby="v-pills-img3-tab">
-                                            <div class="shop-details-tab-img">
-                                                <img src="assets/image/inner-page/shop-details-tab-img3.jpg" alt="">
-                                            </div>
-                                        </div>
-                                        <div class="tab-pane fade" id="v-pills-img4" role="tabpanel"
-                                            aria-labelledby="v-pills-img4-tab">
-                                            <div class="shop-details-tab-img">
-                                                <img src="assets/image/inner-page/shop-details-tab-img4.jpg" alt="">
-                                            </div>
-                                        </div>
-                                        <div class="tab-pane fade" id="v-pills-img5" role="tabpanel"
-                                            aria-labelledby="v-pills-img5-tab">
-                                            <div class="shop-details-tab-img">
-                                                <img src="assets/image/inner-page/shop-details-tab-img5.jpg" alt="">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="nav nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-                                        <button class="nav-link active" id="v-pills-img1-tab" data-bs-toggle="pill"
-                                            data-bs-target="#v-pills-img1" type="button" role="tab" aria-controls="v-pills-img1"
-                                            aria-selected="true">
-                                            <img src="assets/image/inner-page/shop-details-nav-img1.png" alt="">
-                                        </button>
-                                        <button class="nav-link" id="v-pills-img2-tab" data-bs-toggle="pill"
-                                            data-bs-target="#v-pills-img2" type="button" role="tab" aria-controls="v-pills-img2"
-                                            aria-selected="false">
-                                            <img src="assets/image/inner-page/shop-details-nav-img2.png" alt="">
-                                        </button>
-                                        <button class="nav-link" id="v-pills-img3-tab" data-bs-toggle="pill"
-                                            data-bs-target="#v-pills-img3" type="button" role="tab" aria-controls="v-pills-img3"
-                                            aria-selected="false">
-                                            <img src="assets/image/inner-page/shop-details-nav-img3.png" alt="">
-                                        </button>
-                                        <button class="nav-link" id="v-pills-img4-tab" data-bs-toggle="pill"
-                                            data-bs-target="#v-pills-img4" type="button" role="tab" aria-controls="v-pills-img4"
-                                            aria-selected="false">
-                                            <img src="assets/image/inner-page/shop-details-nav-img4.png" alt="">
-                                        </button>
-                                        <button class="nav-link" id="v-pills-img5-tab" data-bs-toggle="pill"
-                                            data-bs-target="#v-pills-img5" type="button" role="tab" aria-controls="v-pills-img5"
-                                            aria-selected="false">
-                                            <img src="assets/image/inner-page/shop-details-nav-img5.png" alt="">
-                                        </button>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-lg-6">
                                 <div class="shop-details-content">
-                                    <h3>Trendy & Comfortable Outerwear</h3>
+                                    <h3><?= $showprodModal['ten_san_pham'] ?></h3>
                                     <div class="rating-review">
                                         <div class="rating">
                                             <div class="star">
@@ -551,7 +505,7 @@
                                         </div>
                                     </div>
                                     <div class="price-area">
-                                        <p class="price"> <del>$ 445.00</del>$ 300.00</p>
+                                        <p class="price"><?= $showprodModal['gia'] ?></p>
                                     </div>
                                     <div class="quantity-color-area">
                                         <div class="quantity-color">
@@ -590,7 +544,7 @@
                                     </div>
                                     <div class="shop-details-btn">
                                         <a class="primary-btn" href="cart-page.html">THÊM VÀO GIỎ HÀNG</a>
-                                        <a class="primary-btn2" href="checkout-page.html">MUA NGAY</a>
+                                        <a class="primary-btn2" href="index.php?page=">MUA NGAY</a>
                                     </div>
                                     <ul class="product-shipping-delivers">
                                         <li class="product-shipping">
@@ -652,6 +606,7 @@
                             </div>
                         </div>
                     </div>
+                   <!--============================================================================================================================================  -->
                 </div>
             </div>
         </div>
