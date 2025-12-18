@@ -1,0 +1,45 @@
+<?php
+require_once "./controllers/controller.php";
+session_start();
+$controller = new controller();
+
+$page = $_GET['page'] ?? 'home';
+$id = $_GET['id'] ?? null;
+switch ($page) {
+    case 'home':
+        $controller->home();
+        break;
+    case 'shop':
+        $controller->shop();
+    case 'shoppingcart':
+        $controller->shoppingcart();
+        break;
+    case 'addtocart':
+        $controller->addtocart();
+        break;
+     case 'editCateProducts':
+        $controllerAdmin->editCateProductsF();
+        break;
+    case 'detele':
+        $controller->deleteproduct();
+        break;
+    case 'productDetail':
+        $controller->productDetail($id);
+        break;
+    case 'productcatalog':
+        $controller->productcatalog();
+        break;
+    case 'delete':
+        $controller->delete();
+        break;
+    case 'update':
+        $controller->update();
+        break;
+    case "checkout-page":
+        $controller->show_checkout($id);
+        break;
+    default:
+    echo "lỗi 404 - không tìm thấy trang này!";
+    break;
+}
+?>
