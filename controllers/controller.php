@@ -8,13 +8,14 @@ class controller {
     }
 
     public function home(){
-        $products = $this->model->getAll();
+        $products = $this->model->getAllhomepage();
+        $best_sell_product = $this->model->getAll();
         $category= $this->model->getAllCategories();
-        $products = $this->model->getAll();
         // $topSelling = $this->model->getTopselling(1);
         include "./views/header-main-without-home.php";
         include "./views/main-content-home.php";
         include "./views/footer.php";
+        
     }
 
     public function shop(){

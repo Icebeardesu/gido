@@ -7,7 +7,7 @@ if(session_status() === PHP_SESSION_NONE){
 <!-- hearder section strats here -->
 <header class="header-area header1">
         <div class="header-logo">
-            <a href="index.php?page=home"><h2>IgniteFoot</h2></a>
+            <a href="index.php?page=home"><img src="http://localhost/gido/assets/image/logo1.png" alt="" width="150px"></a>
         </div>
         <div class="main-menu">
             <div class="mobile-menu-logo">

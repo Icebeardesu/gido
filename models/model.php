@@ -19,6 +19,12 @@ class database {
         $stmt->execute();
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
+    public function getAllhomepage() {
+        $stmt = $this->conn->prepare("SELECT * FROM san_pham limit 4");
+        $stmt->execute();
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    }
+
     public function getProductById( $id) {
         $stmt = $this->conn->prepare("SELECT * FROM san_pham WHERE id_san_pham = ?");
         $stmt->execute([$id]);
