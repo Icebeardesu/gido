@@ -11,7 +11,7 @@ class controller {
         $products = $this->model->getAll();
         $category= $this->model->getAllCategories();
         $products = $this->model->getAll();
-        $topSelling = $this->model->getTopselling(1);
+        // $topSelling = $this->model->getTopselling(1);
         include "./views/main-content-home.php";
         include "./views/footer.php";
     }
