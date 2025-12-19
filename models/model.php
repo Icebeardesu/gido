@@ -85,12 +85,12 @@ class database {
 
     // Lưu chi tiết sản phẩm
     public function insertItem($orderId, $item) {
-        $stmt = $this->conn->prepare("INSERT INTO chi_tiet_hoa_don (id_hoa_don, id_san_pham, ten_san_pham, price, quantity) VALUES (?, ?, ?, ?, ?)");
+        $stmt = $this->conn->prepare("INSERT INTO chi_tiet_hoa_don (id_hoa_don, id_san_pham, ten_san_pham, gia, so_luong) VALUES (?, ?, ?, ?, ?)");
         $stmt->execute([
             $orderId,
-            $item['id'],
-            $item['name'],
-            $item['price'],
+            $item['id_san_pham'],
+            $item['ten_san_pham'],
+            $item['gia'],
             $item['quantity']
         ]);
     }
@@ -107,6 +107,19 @@ class database {
         $stmt = $this->conn->prepare("SELECT * FROM chi_tiet_hoa_don WHERE id_hoa_don = ?");
         $stmt->execute([$id]);
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    }
+    public function beginTransaction() {
+        $this->conn->beginTransaction();
+    }
+
+    // 🔹 LƯU THAY ĐỔI
+    public function commit() {
+        $this->conn->commit();
+    }
+
+    // 🔹 HOÀN TÁC
+    public function rollBack() {
+        $this->conn->rollBack();
     }
 }
 ?>

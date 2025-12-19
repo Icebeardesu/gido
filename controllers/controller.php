@@ -166,28 +166,47 @@ class controller {
         include "./views/faq.php";
         include "./views/footer.php";
     }
-    public function checkout(){
-        if (empty($_SESSION['cart'])) {
-            header("Location: index.php?page=cart");
-            exit;
+    public function checkout(): void
+{
+    session_start();
+
+    // lấy giỏ hàng từ session
+    $productpayment = $_SESSION['cart'] ?? [];
+
+    // nếu giỏ hàng rỗng → quay về cart
+    if (empty($productpayment)) {
+        header("Location: index.php?page=cart");
+        exit;
+    }
+
+    // có thể set phí ship ở đây
+    $shippingFee = 0;
+
+    // load view
+    include "./views/header-main-without-home.php";
+    include "./views/checkout-page.php";
+    include "./views/footer.php";
+}
+
+
+    public function store(): void {
+    session_start();
+
+    $cart = $_SESSION['cart'] ?? [];
+    if (empty($cart)) {
+        header("Location: index.php?page=cart");
+        exit;
+    }
+
+    try {
+        $this->model->beginTransaction();
+
+        // 🔐 Server tự tính subtotal
+        $subtotal = 0;
+        foreach ($cart as $item) {
+            $subtotal += $item['gia'] * $item['quantity'];
         }
 
-        $productpayment = $_SESSION['cart'];
-        include_once "./views/checkout-page.php";
-        include "./views/footer.php";
-    }
-    public function orderProduct(){
-        include "./views/checkout-success.php";
-    }
-    public function store() {
-        session_start();
-        $cart = $_SESSION['cart'] ?? [];
-        if(empty($cart)) {
-            header('Location: index.php?page=cart');
-            exit();
-        }
-
-        $subtotal = $_POST['subtotal'] ?? 0;
         $shipping = $_POST['shipping'] ?? 0;
         $discount = $_POST['discount'] ?? 0;
 
@@ -207,16 +226,28 @@ class controller {
 
         $orderId = $this->model->create($data);
 
-        foreach($cart as $item) {
+        foreach ($cart as $item) {
             $this->model->insertItem($orderId, $item);
         }
 
+        $this->model->commit();
+
         unset($_SESSION['cart']);
 
-        header("Location: index.php?page=order_success&id=$orderId");
-        exit();
-    }
+        header("Location: index.php?page=order_detail&id=$orderId");
+        exit;
 
+    } catch (Exception $e) {
+        $this->model->rollBack();
+        echo "Lỗi đặt hàng: " . $e->getMessage();
+        exit;
+    }
+}
+
+
+    public function orderProduct(){
+        include "./views/checkout-success.php";
+    }
     // Hiển thị trang thành công
     public function detail($id)
 {

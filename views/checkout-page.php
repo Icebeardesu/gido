@@ -881,36 +881,41 @@
                             <div class="cart-body">
 
                                 <?php
-                                    $subtotal = 0;
-                                    $shipping = isset($shippingFee) ? $shippingFee : 0;
-                                    $discount = isset($_SESSION['discount']) ? $_SESSION['discount'] : 0;
+$subtotal = 0;
+$shipping = $shippingFee ?? 0;
+$discount = $_SESSION['discount'] ?? 0;
+?>
 
-                                    foreach($productpayment as $item):
-                                        $lineTotal = $item['gia'] * $item['quantity'];
-                                        $subtotal += $lineTotal;
-                                ?>
-                                <ul>
-                                    <li class="single-item">
-                                        <div class="item-area">
-                                            <div class="main-item">
-                                                <div class="item-img">
-                                                    <img src="assets/image/products/<?= $item['anh'] ?>" alt="">
-                                                </div>
-                                                <div class="content-and-quantity">
-                                                    <div class="content">
-                                                        <h6><?= $item['ten_san_pham'] ?></h6>
-                                                        <span><?= number_format($item['gia'],0,',','.') ?> VNĐ</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </li>
-                                </ul>
-                                <?php endforeach; ?>
+<?php foreach ($productpayment as $item): ?>
+    <?php
+        $qty = $item['quantity'] ?? 1;
+        $lineTotal = $item['gia'] * $qty;
+        $subtotal += $lineTotal;
+    ?>
+    <ul>
+        <li class="single-item">
+            <div class="item-area">
+                <div class="main-item">
+                    <div class="item-img">
+                        <img src="assets/image/products/<?= htmlspecialchars($item['anh']) ?>" alt="">
+                    </div>
+                    <div class="content-and-quantity">
+                        <div class="content">
+                            <h6><?= htmlspecialchars($item['ten_san_pham']) ?></h6>
+                            <span><?= number_format($item['gia'],0,',','.') ?> VNĐ</span>
+                            <small>x <?= $qty ?></small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </li>
+    </ul>
+<?php endforeach; ?>
 
-                            </div>
+<?php
+$total = $subtotal + $shipping - $discount;
+?>
 
-                            <?php $total = $subtotal + $shipping; ?>
 
                             <div class="cart-footer">
                                 <div class="pricing-area mb-40">

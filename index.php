@@ -54,14 +54,9 @@ switch ($page) {
     case 'store':              // Khi form gửi về đây
         $controller->store();
         break;
-    case 'order_success':
-        $id = $_GET['id'] ?? null;
-        if($id) {
-            $controller->detail($id);
-        } else {
-            header('Location: index.php');
-        }
-    break;
+    case 'order_detail':
+        $controller->detail($_GET['id'] ?? null);
+        break;
     default:
     echo "lỗi 404 - không tìm thấy trang này!";
     break;
