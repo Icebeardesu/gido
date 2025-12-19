@@ -3,7 +3,7 @@ session_start();
 require_once "admin/controllers/controller.php";
 $controllerAdmin = new controllerAdmin();
 
-$pageAdmin = $_GET['pageAdmin'] ?? 'dashboard';
+$pageAdmin = $_GET['pageAdmin'] ?? 'loginAdmin';
 $idAdmin = $_GET['idAdmin'] ?? null;
 
 $publicPages = ['loginAdmin', 'loginAdminFunction'];

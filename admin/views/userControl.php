@@ -155,7 +155,7 @@
       </li>
 
       <li class="nav-item">
-        <a class="nav-link active" href="admin.php?pageAdmin=show_product_control">
+        <a class="nav-link" href="admin.php?pageAdmin=show_product_control">
           <i class="bi bi-box-seam me-1"></i> Quản lý sản phẩm
         </a>
       </li>
@@ -167,8 +167,8 @@
       </li>
 
       <li class="nav-item">
-        <a class="nav-link" href="admin.php?pageAdmin=userControl">
-          <i class="bi bi-people me-1"></i> Quản lý khách hàng
+        <a class="nav-link active" href="admin.php?pageAdmin=userControl">
+          <i class="bi bi-people me-1"></i> Quản lý người dùng
         </a>
       </li>
 
