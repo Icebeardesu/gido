@@ -74,18 +74,45 @@ class database {
         $stmt = $this->conn->prepare("insert into nguoi_dung(id_nguoi_dung, ten_nguoi_dung, email, mat_khau) values(?, ?, ?, ?)");
         return $stmt->execute([$id, $ten, $email, $passwordHash]);
     }
-<<<<<<< Updated upstream
     public function getUserByEmail($email){
     $stmt = $this->conn->prepare(
         "SELECT * FROM nguoi_dung WHERE email = ? LIMIT 1"
     );
     $stmt->execute([$email]);
     return $stmt->fetch();
-=======
 
     // Lưu chi tiết sản phẩm
+    }
+public function create($data) {
+        $stmt = $this->conn->prepare("INSERT INTO hoa_don (id_nguoi_dung, tong_tien, phi_giao_hang, giam_gia, thanh_toan, phuong_thuc, customer_name, phone, email, address, note, status) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
+        $stmt->execute([
+            $data['id_nguoi_dung'],
+            $data['tong_tien'],
+            $data['phi_giao_hang'],
+            $data['giam_gia'],
+            $data['thanh_toan'],
+            $data['phuong_thuc'],
+            $data['customer_name'],
+            $data['phone'],
+            $data['email'],
+            $data['address'],
+            $data['note'],
+            'Đang xử lý'
+        ]);
+        return $this->conn->lastInsertId();
+    }
 
-
+    // Lưu chi tiết sản phẩm
+    public function insertItem($orderId, $item) {
+        $stmt = $this->conn->prepare("INSERT INTO chi_tiet_hoa_don (id_hoa_don, id_san_pham, ten_san_pham, gia, so_luong) VALUES (?, ?, ?, ?, ?)");
+        $stmt->execute([
+            $orderId,
+            $item['id_san_pham'],
+            $item['ten_san_pham'],
+            $item['gia'],
+            $item['quantity']
+        ]);
+    }
 
     // Lấy thông tin hóa đơn theo ID
     public function showHoaDon($id) {
@@ -95,11 +122,30 @@ class database {
     }
 
     // Lấy chi tiết sản phẩm theo hóa đơn
-    public function getByHoaDon($id) {
-        $stmt = $this->conn->prepare("SELECT * FROM chi_tiet_hoa_don WHERE id_hoa_don = ?");
-        $stmt->execute([$id]);
-        return $stmt->fetchAll(PDO::FETCH_ASSOC);
->>>>>>> Stashed changes
+    // Lấy chi tiết sản phẩm theo hóa đơn (JOIN với bảng san_pham để lấy tên và ảnh)
+public function getByHoaDon($id) {
+    $sql = "SELECT ct.id, ct.id_hoa_don, ct.id_san_pham, ct.gia, ct.so_luong, 
+                   sp.ten_san_pham, sp.anh
+            FROM chi_tiet_hoa_don ct
+            JOIN san_pham sp ON ct.id_san_pham = sp.id_san_pham
+            WHERE ct.id_hoa_don = ?";
+    $stmt = $this->conn->prepare($sql);
+    $stmt->execute([$id]);
+    return $stmt->fetchAll(PDO::FETCH_ASSOC);
+}
+    public function beginTransaction() {
+        $this->conn->beginTransaction();
     }
+
+    // 🔹 LƯU THAY ĐỔI
+    public function commit() {
+        $this->conn->commit();
+    }
+
+    // 🔹 HOÀN TÁC
+    public function rollBack() {
+        $this->conn->rollBack();
+    }
+
 }
 ?>

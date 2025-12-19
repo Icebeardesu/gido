@@ -92,46 +92,46 @@
         }
 
         body {
-      background: linear-gradient(135deg, #f5f7fa, #e4ecf7);
-      font-family: 'Segoe UI', system-ui, sans-serif;
-    }
+                background: linear-gradient(135deg, #f5f7fa, #e4ecf7);
+                font-family: 'Segoe UI', system-ui, sans-serif;
+              }
 
-    .admin-navbar {
-      background: linear-gradient(90deg, #0d6efd, #0b5ed7);
-      box-shadow: 0 4px 20px rgba(0,0,0,.12);
-    }
+              .admin-navbar {
+                background: linear-gradient(90deg, #0d6efd, #0b5ed7);
+                box-shadow: 0 4px 20px rgba(0,0,0,.12);
+              }
 
-    .admin-navbar .nav-link {
-      color: rgba(255,255,255,.9) !important;
-      font-weight: 500;
-      padding: 10px 16px;
-      border-radius: 8px;
-      margin-right: 6px;
-      transition: .2s;
-    }
+              .admin-navbar .nav-link {
+                color: rgba(255,255,255,.9) !important;
+                font-weight: 500;
+                padding: 10px 16px;
+                border-radius: 8px;
+                margin-right: 6px;
+                transition: .2s;
+              }
 
-    .admin-navbar .nav-link:hover,
-    .admin-navbar .nav-link.active {
-      background: rgba(255,255,255,.2);
-      color: #fff !important;
-    }
+              .admin-navbar .nav-link:hover,
+              .admin-navbar .nav-link.active {
+                background: rgba(255,255,255,.2);
+                color: #fff !important;
+              }
 
-    .card {
-      border-radius: 18px;
-      border: none;
-    }
+              .card {
+                border-radius: 18px;
+                border: none;
+              }
 
-    .table th,
-    .table td {
-      vertical-align: middle !important;
-    }
+              .table th,
+              .table td {
+                vertical-align: middle !important;
+              }
 
-    .text-limit {
-      max-width: 260px;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-    }
+              .text-limit {
+                max-width: 260px;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+              }
     </style>
 </head>
 <body>
@@ -155,7 +155,7 @@
       </li>
 
       <li class="nav-item">
-        <a class="nav-link active" href="admin.php?pageAdmin=show_product_control">
+        <a class="nav-link " href="admin.php?pageAdmin=show_product_control">
           <i class="bi bi-box-seam me-1"></i> Quản lý sản phẩm
         </a>
       </li>
@@ -167,7 +167,7 @@
       </li>
 
       <li class="nav-item">
-        <a class="nav-link" href="admin.php?pageAdmin=userControl">
+        <a class="nav-link active" href="admin.php?pageAdmin=userControl">
           <i class="bi bi-people me-1"></i> Quản lý khách hàng
         </a>
       </li>

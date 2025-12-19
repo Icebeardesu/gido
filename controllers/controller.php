@@ -184,20 +184,26 @@ class controller {
         include "./views/about.php";
         include "./views/footer.php";
     }
-    public function checkout(){
-        if (empty($_SESSION['cart'])) {
-            header("Location: index.php?page=cart");
-            exit;
-        }
+    public function checkout(): void{
+    // lấy giỏ hàng từ session
+    $productpayment = $_SESSION['cart'] ?? [];
 
-        $productpayment = $_SESSION['cart'];
-        include_once "./views/checkout-page.php";
-        include "./views/footer.php";
+    // nếu giỏ hàng rỗng → quay về cart
+    if (empty($productpayment)) {
+        header("Location: index.php?page=cart");
+        exit;
     }
+
+    // có thể set phí ship ở đây
+    $shippingFee = 0;
+
+    // load view
+    include "./views/checkout-page.php";
+    include "./views/footer.php";
+}
     public function registerLoginForm(){
         include "./views/register-login-form.php";
     }
-<<<<<<< Updated upstream
 
     public function registerCustomer(){
         $id = uniqid('USER');
@@ -277,8 +283,83 @@ class controller {
     header("Location: index.php");
     exit;
     }
+    public function store(): void {
+
+    $cart = $_SESSION['cart'] ?? [];
+    if (empty($cart)) {
+        header("Location: index.php?page=cart");
+        exit;
+    }
+
+    try {
+        $this->model->beginTransaction();
+
+        // 🔐 Server tự tính subtotal
+        $subtotal = 0;
+        foreach ($cart as $item) {
+            $subtotal += $item['gia'] * $item['quantity'];
+        }
+
+        $shipping = $_POST['shipping'] ?? 0;
+        $discount = $_POST['discount'] ?? 0;
+
+        $data = [
+            'id_nguoi_dung' => $_SESSION['user_id'] ?? 0,
+            'customer_name' => $_POST['full_name'] ?? '',
+            'phone' => $_POST['phone'] ?? '',
+            'email' => $_POST['email'] ?? '',
+            'address' => $_POST['address'] ?? '',
+            'note' => $_POST['note'] ?? '',
+            'tong_tien' => $subtotal,
+            'phi_giao_hang' => $shipping,
+            'giam_gia' => $discount,
+            'thanh_toan' => $subtotal + $shipping - $discount,
+            'phuong_thuc' => $_POST['payment_method'] ?? 1,
+            'created_at' => date('Y-m-d H:i:s')
+        ];
+
+        $orderId = $this->model->create($data);
+
+        foreach ($cart as $item) {
+            $this->model->insertItem($orderId, $item);
+        }
+
+        $this->model->commit();
+
+        unset($_SESSION['cart']);
+
+        header("Location: index.php?page=order_detail&id=$orderId");
+        exit;
+
+    } catch (Exception $e) {
+        $this->model->rollBack();
+        echo "Lỗi đặt hàng: " . $e->getMessage();
+        exit;
+    }
+}
+
+
+    public function orderProduct(){
+        include "./views/checkout-success.php";
+    }
+    // Hiển thị trang thành công
+    public function detail($id)
+{
+    if (!$id) {
+        header('Location: index.php');
+        exit();
+    }
+
+    $order = $this->model->showHoaDon($id);
+    $items = $this->model->getByHoaDon($id);
+    
+    // 🔴 QUAN TRỌNG
+    if (!$order) {
+        echo "<h3>Hóa đơn không tồn tại hoặc đã bị xóa</h3>";
+        exit();
+    }
+
+    require 'views/checkout-success.php';
+}
 }
 ?>
-=======
-}
->>>>>>> Stashed changes

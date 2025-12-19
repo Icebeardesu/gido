@@ -48,7 +48,6 @@ switch ($page) {
     case 'profileCustomer':
         $controller->profileCustomer();
         break;
-<<<<<<< Updated upstream
     case 'registerLoginForm':
         $controller->registerLoginForm();
         break;
@@ -61,8 +60,16 @@ switch ($page) {
     case 'registerCustomer':
         $controller->registerCustomer();
         break;
-=======
->>>>>>> Stashed changes
+    case 'order_success':
+    $id = $_GET['id'] ?? null;
+    $controller->orderProduct($id);
+    break;
+    case 'store':              // Khi form gửi về đây
+        $controller->store();
+        break;
+    case 'order_detail':
+        $controller->detail($_GET['id'] ?? null);
+        break;    
     default:
     echo "lỗi 404 - không tìm thấy trang này!";
     break;

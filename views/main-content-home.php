@@ -156,7 +156,7 @@
                                         
                                         <div class="overlay">
                                             <div class="cart-area">
-                                                <a class="add-cart-btn" href="cart-page.html"><i class="bi bi-bag-check"></i>
+                                                <a class="add-cart-btn" href="index.php?page=addtocart&id=<?= $item['id_san_pham'] ?>"><i class="bi bi-bag-check"></i>
                                                     Add To Cart</a>
                                             </div>
                                         </div>
@@ -273,7 +273,7 @@
                                         </div>
                                         <div class="overlay">
                                             <div class="cart-area">
-                                                <a class="add-cart-btn" href="cart-page.html"><i class="bi bi-bag-check"></i>
+                                                <a class="add-cart-btn" href="index.php?page=addtocart&id=<?= $item['id_san_pham'] ?>"><i class="bi bi-bag-check"></i>
                                                     Add To Cart</a>
                                             </div>
                                         </div>

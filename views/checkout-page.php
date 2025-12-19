@@ -327,256 +327,6 @@
                             <li><a href="3columns-left.html">KIDS</a></li> -->
                             <li class="menu-item-has-children position-inherit">
                                 <a href="index.php?page=shop" class="drop-down"> Shop</a><i class="bi bi-plus dropdown-icon"></i>
-                                <div class="sub-menu mega-menu">
-                                    <div class="container">
-                                        <div class="row g-xl-4 g-0">
-                                            <div class="col-xl-3">
-                                                <div class="megamenu-items">
-                                                    <h6>Shop Layout</h6>
-                                                    <ul class="menu-list">
-                                                        <li><a href="shop-slider.html">shop slider</a></li>
-                                                        <li><a href="1columns-left.html">1 Columns left sidebar</a></li>
-                                                        <li><a href="1columns-right.html">1 Columns right sidebar</a></li>
-                                                        <li><a href="2columns-left.html">2 Columns left sidebar</a></li>
-                                                        <li><a href="2columns-right.html">2 Columns right sidebar</a></li>
-                                                        <li><a href="3columns-page.html">3 Columns page nosidebar</a></li>
-                                                        <li><a href="3columns-left.html">3 Columns left sidebar </a></li>
-                                                        <li><a href="3columns-right.html">3 Columns right sidebar </a>
-                                                        </li>
-                                                        <li><a href="4columns-page.html">4 Columns page</a></li>
-                                                        <li><a href="category-top.html">Category Top</a></li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                            <div class="col-xl-3">
-                                                <div class="megamenu-items">
-                                                    <h6>Filter Layout</h6>
-                                                    <ul class="menu-list">
-                                                        <li><a href="3columns-left.html">Left sidebar</a></li>
-                                                                    <li><a href="3columns-right.html">Right sidebar</a></li>
-                                                                    <li><a href="category-top.html">Filter Hidden</a></li>
-                                                                    <li><a href="top-filter-bar.html">Filter Top</a></li>
-                                                    </ul>
-                                                </div>
-                                                <div class="megamenu-items">
-                                                    <h6>Woo Pages</h6>
-                                                    <ul class="menu-list">
-                                                        <li><a href="cart-page.html">cart page</a></li>
-                                                        <li><a href="checkout-page.html">checkout page</a></li>
-                                                        <li><a href="whislist.html">whistlist</a></li>
-                                                        <li><a href="my-account.html">My Account</a></li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                            <div class="col-xl-3">
-                                                <div class="megamenu-items">
-                                        <h6>Product details</h6>
-                                        <ul class="menu-list">
-                                            <li><a href="product-details.html">Product Default</a></li>
-                                            <li><a href="product-details.html">Product Thumbnail Left</a>
-                                            </li>
-                                            <li><a href="product-details2.html">Product Thumbnail
-                                                    Right</a></li>
-                                            <li><a href="product-details3.html">Product Slider</a></li>
-                                            <li><a href="product-details4.html">Offer Countdown</a></li>
-                                        </ul>
-                                    </div>
-                                            </div>
-                                            <div class="col-xl-3 dd--none">
-                                                <div class="megamenu-items">
-                                                    <h6>Best selling products</h6>
-                                                    <div class="swiper menu-product-slider">
-                                            <div class="swiper-wrapper">
-                                                <div class="swiper-slide">
-                                                    <div class="product-card">
-                                                        <div class="product-card-img">
-                                                            <a href="product-details.html">
-                                                                <img src="assets/image/home1/product-image4.jpg" alt="">
-                                                            </a>
-                                                            <div class="overlay">
-                                                                <div class="cart-area">
-                                                                    <a class="add-cart-btn" href="cart-page.html"><i
-                                                                            class="bi bi-bag-check"></i>
-                                                                        Add To Cart</a>
-                                                                </div>
-                                                            </div>
-                                                            <div class="view-and-favorite-area">
-                                                                <ul>
-                                                                    <li>
-                                                                        <a href="whislist.html">
-                                                                            <svg xmlns="http://www.w3.org/2000/svg"
-                                                                                width="18" height="18"
-                                                                                viewBox="0 0 18 18">
-                                                                                <g clip-path="url(#clip0_168_378)">
-                                                                                    <path
-                                                                                        d="M16.528 2.20919C16.0674 1.71411 15.5099 1.31906 14.8902 1.04859C14.2704 0.778112 13.6017 0.637996 12.9255 0.636946C12.2487 0.637725 11.5794 0.777639 10.959 1.048C10.3386 1.31835 9.78042 1.71338 9.31911 2.20854L9.00132 2.54436L8.68352 2.20854C6.83326 0.217151 3.71893 0.102789 1.72758 1.95306C1.63932 2.03507 1.5541 2.12029 1.47209 2.20854C-0.490696 4.32565 -0.490696 7.59753 1.47209 9.71463L8.5343 17.1622C8.77862 17.4201 9.18579 17.4312 9.44373 17.1868C9.45217 17.1788 9.46039 17.1706 9.46838 17.1622L16.528 9.71463C18.4907 7.59776 18.4907 4.32606 16.528 2.20919ZM15.5971 8.82879H15.5965L9.00132 15.7849L2.40553 8.82879C0.90608 7.21113 0.90608 4.7114 2.40553 3.09374C3.76722 1.61789 6.06755 1.52535 7.5434 2.88703C7.61505 2.95314 7.68401 3.0221 7.75012 3.09374L8.5343 3.92104C8.79272 4.17781 9.20995 4.17781 9.46838 3.92104L10.2526 3.09438C11.6142 1.61853 13.9146 1.52599 15.3904 2.88767C15.4621 2.95378 15.531 3.02274 15.5971 3.09438C17.1096 4.71461 17.1207 7.2189 15.5971 8.82879Z">
-                                                                                    </path>
-                                                                                </g>
-                                                                            </svg>
-                                                                        </a>
-                                                                    </li>
-                                                                    <li>
-                                                                        <a data-bs-toggle="modal"
-                                                                            data-bs-target="#product-view">
-                                                                            <svg xmlns="http://www.w3.org/2000/svg"
-                                                                                width="22" height="22"
-                                                                                viewBox="0 0 22 22">
-                                                                                <path
-                                                                                    d="M21.8601 10.5721C21.6636 10.3032 16.9807 3.98901 10.9999 3.98901C5.019 3.98901 0.335925 10.3032 0.139601 10.5718C0.0488852 10.6961 0 10.846 0 10.9999C0 11.1537 0.0488852 11.3036 0.139601 11.4279C0.335925 11.6967 5.019 18.011 10.9999 18.011C16.9807 18.011 21.6636 11.6967 21.8601 11.4281C21.951 11.3039 21.9999 11.154 21.9999 11.0001C21.9999 10.8462 21.951 10.6963 21.8601 10.5721ZM10.9999 16.5604C6.59432 16.5604 2.77866 12.3696 1.64914 10.9995C2.77719 9.62823 6.58487 5.43955 10.9999 5.43955C15.4052 5.43955 19.2206 9.62969 20.3506 11.0005C19.2225 12.3717 15.4149 16.5604 10.9999 16.5604Z">
-                                                                                </path>
-                                                                                <path
-                                                                                    d="M10.9999 6.64832C8.60039 6.64832 6.64819 8.60051 6.64819 11C6.64819 13.3994 8.60039 15.3516 10.9999 15.3516C13.3993 15.3516 15.3515 13.3994 15.3515 11C15.3515 8.60051 13.3993 6.64832 10.9999 6.64832ZM10.9999 13.9011C9.40013 13.9011 8.09878 12.5997 8.09878 11C8.09878 9.40029 9.40017 8.0989 10.9999 8.0989C12.5995 8.0989 13.9009 9.40029 13.9009 11C13.9009 12.5997 12.5996 13.9011 10.9999 13.9011Z">
-                                                                                </path>
-                                                                            </svg>
-                                                                        </a>
-                                                                    </li>
-                                                                </ul>
-                                                            </div>
-                                                        </div>
-                                                        <div class="product-card-content">
-                                                            <div class="rating">
-                                                                <ul>
-                                                                    <li><i class="bi bi-star-fill"></i></li>
-                                                                    <li><i class="bi bi-star-fill"></i></li>
-                                                                    <li><i class="bi bi-star-fill"></i></li>
-                                                                    <li><i class="bi bi-star-fill"></i></li>
-                                                                    <li><i class="bi bi-star-fill"></i></li>
-                                                                </ul>
-                                                            </div>
-                                                            <h6><a class="hover-underline" href="product-details.html">Trendy & Comfortable Outerwear</a></h6>
-                                                            <p class="price"><del>$345.00</del> $300.00 </p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="swiper-slide">
-                                                    <div class="product-card">
-                                                        <div class="product-card-img">
-                                                            <a href="product-details.html">
-                                                                <img src="assets/image/home1/product-image3.jpg" alt="">
-                                                            </a>
-                                                            <div class="overlay">
-                                                                <div class="cart-area">
-                                                                    <a class="add-cart-btn" href="cart-page.html"><i
-                                                                            class="bi bi-bag-check"></i>
-                                                                        Add To Cart</a>
-                                                                </div>
-                                                            </div>
-                                                            <div class="view-and-favorite-area">
-                                                                <ul>
-                                                                    <li>
-                                                                        <a href="whislist.html">
-                                                                            <svg xmlns="http://www.w3.org/2000/svg"
-                                                                                width="18" height="18"
-                                                                                viewBox="0 0 18 18">
-                                                                                <g clip-path="url(#clip0_168_378)">
-                                                                                    <path
-                                                                                        d="M16.528 2.20919C16.0674 1.71411 15.5099 1.31906 14.8902 1.04859C14.2704 0.778112 13.6017 0.637996 12.9255 0.636946C12.2487 0.637725 11.5794 0.777639 10.959 1.048C10.3386 1.31835 9.78042 1.71338 9.31911 2.20854L9.00132 2.54436L8.68352 2.20854C6.83326 0.217151 3.71893 0.102789 1.72758 1.95306C1.63932 2.03507 1.5541 2.12029 1.47209 2.20854C-0.490696 4.32565 -0.490696 7.59753 1.47209 9.71463L8.5343 17.1622C8.77862 17.4201 9.18579 17.4312 9.44373 17.1868C9.45217 17.1788 9.46039 17.1706 9.46838 17.1622L16.528 9.71463C18.4907 7.59776 18.4907 4.32606 16.528 2.20919ZM15.5971 8.82879H15.5965L9.00132 15.7849L2.40553 8.82879C0.90608 7.21113 0.90608 4.7114 2.40553 3.09374C3.76722 1.61789 6.06755 1.52535 7.5434 2.88703C7.61505 2.95314 7.68401 3.0221 7.75012 3.09374L8.5343 3.92104C8.79272 4.17781 9.20995 4.17781 9.46838 3.92104L10.2526 3.09438C11.6142 1.61853 13.9146 1.52599 15.3904 2.88767C15.4621 2.95378 15.531 3.02274 15.5971 3.09438C17.1096 4.71461 17.1207 7.2189 15.5971 8.82879Z">
-                                                                                    </path>
-                                                                                </g>
-                                                                            </svg>
-                                                                        </a>
-                                                                    </li>
-                                                                    <li>
-                                                                        <a data-bs-toggle="modal"
-                                                                            data-bs-target="#product-view">
-                                                                            <svg xmlns="http://www.w3.org/2000/svg"
-                                                                                width="22" height="22"
-                                                                                viewBox="0 0 22 22">
-                                                                                <path
-                                                                                    d="M21.8601 10.5721C21.6636 10.3032 16.9807 3.98901 10.9999 3.98901C5.019 3.98901 0.335925 10.3032 0.139601 10.5718C0.0488852 10.6961 0 10.846 0 10.9999C0 11.1537 0.0488852 11.3036 0.139601 11.4279C0.335925 11.6967 5.019 18.011 10.9999 18.011C16.9807 18.011 21.6636 11.6967 21.8601 11.4281C21.951 11.3039 21.9999 11.154 21.9999 11.0001C21.9999 10.8462 21.951 10.6963 21.8601 10.5721ZM10.9999 16.5604C6.59432 16.5604 2.77866 12.3696 1.64914 10.9995C2.77719 9.62823 6.58487 5.43955 10.9999 5.43955C15.4052 5.43955 19.2206 9.62969 20.3506 11.0005C19.2225 12.3717 15.4149 16.5604 10.9999 16.5604Z">
-                                                                                </path>
-                                                                                <path
-                                                                                    d="M10.9999 6.64832C8.60039 6.64832 6.64819 8.60051 6.64819 11C6.64819 13.3994 8.60039 15.3516 10.9999 15.3516C13.3993 15.3516 15.3515 13.3994 15.3515 11C15.3515 8.60051 13.3993 6.64832 10.9999 6.64832ZM10.9999 13.9011C9.40013 13.9011 8.09878 12.5997 8.09878 11C8.09878 9.40029 9.40017 8.0989 10.9999 8.0989C12.5995 8.0989 13.9009 9.40029 13.9009 11C13.9009 12.5997 12.5996 13.9011 10.9999 13.9011Z">
-                                                                                </path>
-                                                                            </svg>
-                                                                        </a>
-                                                                    </li>
-                                                                </ul>
-                                                            </div>
-                                                        </div>
-                                                        <div class="product-card-content">
-                                                            <div class="rating">
-                                                                <ul>
-                                                                    <li><i class="bi bi-star-fill"></i></li>
-                                                                    <li><i class="bi bi-star-fill"></i></li>
-                                                                    <li><i class="bi bi-star-fill"></i></li>
-                                                                    <li><i class="bi bi-star-fill"></i></li>
-                                                                    <li><i class="bi bi-star-fill"></i></li>
-                                                                </ul>
-                                                            </div>
-                                                            <h6><a class="hover-underline" href="product-details.html">Trendy Oversized Shirt</a></h6>
-                                                            <p class="price">$220.00 </p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="swiper-slide">
-                                                    <div class="product-card">
-                                                        <div class="product-card-img">
-                                                            <a href="product-details.html">
-                                                                <img src="assets/image/home1/product-image2.jpg" alt="">
-                                                            </a>
-                                                            <div class="overlay">
-                                                                <div class="cart-area">
-                                                                    <a class="add-cart-btn" href="cart-page.html"><i
-                                                                            class="bi bi-bag-check"></i>
-                                                                        Add To Cart</a>
-                                                                </div>
-                                                            </div>
-                                                            <div class="view-and-favorite-area">
-                                                                <ul>
-                                                                    <li>
-                                                                        <a href="whislist.html">
-                                                                            <svg xmlns="http://www.w3.org/2000/svg"
-                                                                                width="18" height="18"
-                                                                                viewBox="0 0 18 18">
-                                                                                <g clip-path="url(#clip0_168_378)">
-                                                                                    <path
-                                                                                        d="M16.528 2.20919C16.0674 1.71411 15.5099 1.31906 14.8902 1.04859C14.2704 0.778112 13.6017 0.637996 12.9255 0.636946C12.2487 0.637725 11.5794 0.777639 10.959 1.048C10.3386 1.31835 9.78042 1.71338 9.31911 2.20854L9.00132 2.54436L8.68352 2.20854C6.83326 0.217151 3.71893 0.102789 1.72758 1.95306C1.63932 2.03507 1.5541 2.12029 1.47209 2.20854C-0.490696 4.32565 -0.490696 7.59753 1.47209 9.71463L8.5343 17.1622C8.77862 17.4201 9.18579 17.4312 9.44373 17.1868C9.45217 17.1788 9.46039 17.1706 9.46838 17.1622L16.528 9.71463C18.4907 7.59776 18.4907 4.32606 16.528 2.20919ZM15.5971 8.82879H15.5965L9.00132 15.7849L2.40553 8.82879C0.90608 7.21113 0.90608 4.7114 2.40553 3.09374C3.76722 1.61789 6.06755 1.52535 7.5434 2.88703C7.61505 2.95314 7.68401 3.0221 7.75012 3.09374L8.5343 3.92104C8.79272 4.17781 9.20995 4.17781 9.46838 3.92104L10.2526 3.09438C11.6142 1.61853 13.9146 1.52599 15.3904 2.88767C15.4621 2.95378 15.531 3.02274 15.5971 3.09438C17.1096 4.71461 17.1207 7.2189 15.5971 8.82879Z">
-                                                                                    </path>
-                                                                                </g>
-                                                                            </svg>
-                                                                        </a>
-                                                                    </li>
-                                                                    <li>
-                                                                        <a data-bs-toggle="modal"
-                                                                            data-bs-target="#product-view">
-                                                                            <svg xmlns="http://www.w3.org/2000/svg"
-                                                                                width="22" height="22"
-                                                                                viewBox="0 0 22 22">
-                                                                                <path
-                                                                                    d="M21.8601 10.5721C21.6636 10.3032 16.9807 3.98901 10.9999 3.98901C5.019 3.98901 0.335925 10.3032 0.139601 10.5718C0.0488852 10.6961 0 10.846 0 10.9999C0 11.1537 0.0488852 11.3036 0.139601 11.4279C0.335925 11.6967 5.019 18.011 10.9999 18.011C16.9807 18.011 21.6636 11.6967 21.8601 11.4281C21.951 11.3039 21.9999 11.154 21.9999 11.0001C21.9999 10.8462 21.951 10.6963 21.8601 10.5721ZM10.9999 16.5604C6.59432 16.5604 2.77866 12.3696 1.64914 10.9995C2.77719 9.62823 6.58487 5.43955 10.9999 5.43955C15.4052 5.43955 19.2206 9.62969 20.3506 11.0005C19.2225 12.3717 15.4149 16.5604 10.9999 16.5604Z">
-                                                                                </path>
-                                                                                <path
-                                                                                    d="M10.9999 6.64832C8.60039 6.64832 6.64819 8.60051 6.64819 11C6.64819 13.3994 8.60039 15.3516 10.9999 15.3516C13.3993 15.3516 15.3515 13.3994 15.3515 11C15.3515 8.60051 13.3993 6.64832 10.9999 6.64832ZM10.9999 13.9011C9.40013 13.9011 8.09878 12.5997 8.09878 11C8.09878 9.40029 9.40017 8.0989 10.9999 8.0989C12.5995 8.0989 13.9009 9.40029 13.9009 11C13.9009 12.5997 12.5996 13.9011 10.9999 13.9011Z">
-                                                                                </path>
-                                                                            </svg>
-                                                                        </a>
-                                                                    </li>
-                                                                </ul>
-                                                            </div>
-                                                        </div>
-                                                        <div class="product-card-content">
-                                                            <div class="rating">
-                                                                <ul>
-                                                                    <li><i class="bi bi-star-fill"></i></li>
-                                                                    <li><i class="bi bi-star-fill"></i></li>
-                                                                    <li><i class="bi bi-star-fill"></i></li>
-                                                                    <li><i class="bi bi-star-fill"></i></li>
-                                                                    <li><i class="bi bi-star-fill"></i></li>
-                                                                </ul>
-                                                            </div>
-                                                            <h6><a class="hover-underline" href="product-details.html">Classic Slim Fit Blazer</a></h6>
-                                                            <p class="price"><del>$355.00</del> $280.00 </p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
                             </li>
                             <li class="menu-item-has-children">
                                 <a href="#" class="drop-down"> BLOG</a><i class="bi bi-plus dropdown-icon"></i>
@@ -796,445 +546,235 @@
     <!-- breadcrumb section ends here -->
     <!-- checkout section strats here -->
     <div class="checkout-section mb-100">
-        <div class="container">
-            <div class="row g-lg-4 gy-5">
-                <div class="col-xl-7 col-lg-8">
-                    <div class="enquery-section">
-                        <div class="checkout-form-title">
-                            <h4>Thông tin thanh toán</h4>
-                        </div>
-                        <div class="enquery-form-wrapper style-3">
-                            <form>
-                                <div class="row">
-                                    <div class="col-md-6 mb-30">
-                                        <div class="form-inner">
-                                            <label>Tên đầy đủ</label>
-                                            <input type="text" placeholder="Nhập họ tên đầy đủ">
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6 mb-30">
-                                        <div class="form-inner">
-                                            <label>Số điện thoại</label>
-                                            <input type="text" placeholder="(84)+ 123 456 789">
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6 mb-30">
-                                        <div class="form-inner">
-                                            <label>Địa chỉ Email</label>
-                                            <input type="email" placeholder="abc@gmail.com">
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6 mb-30">
-                                        <div class="form-inner">
-                                            <label>Địa chỉ<span>*</span></label>
-                                            <input type="text" placeholder="Nơi nhận hàng">
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6 mb-30">
-                                        <div class="form-inner">
-                                            <label>Mã bưu điện<span>*</span></label>
-                                            <input type="email" placeholder="Mã bưu chính">
-                                        </div>
-                                    </div>
-                                    <div class="col-md-12 mb-15">
-                                        <div class="form-inner">
-                                            <label>mô tả<span>*</span></label>
-                                            <textarea placeholder="Văn bản của bạn ở đây"></textarea>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-12 mb-25">
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" value=""
-                                                id="contactCheck">
-                                            <label class="form-check-label" for="contactCheck">
-                                                Làm ơn lưu lại <span> tên và địa chỉ</span>
-                                            </label>
-                                        </div>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
+    <div class="container">
+
+        <!-- ===== 1 FORM DUY NHẤT ===== -->
+        <form action="index.php?page=store" method="POST">
+
+        <div class="row g-lg-4 gy-5">
+
+            <!-- ================= THÔNG TIN THANH TOÁN ================= -->
+            <div class="col-xl-7 col-lg-8">
+                <div class="enquery-section">
+                    <div class="checkout-form-title">
+                        <h4>Thông tin thanh toán</h4>
                     </div>
-                </div>
-                <div class="col-xl-5 col-lg-4"> 
-                    <div class="checkout-form-wrapper">
-                        <div class="checkout-form-title">
-                            <h4>Chi tiết đơn hàng</h4>
-                        </div>
-                        <div class="order-sum-area">
-                            <form action="index.php?page=order_success&id=?" method="POST">
-                                <div class="cart-menu">
-                                    <div class="cart-body">
-                                        <?php
-                                            $subtotal = 0;
-                                            $shipping = 0;
-                                            ?>
-                                        <?php foreach($productpayment as $item): ?>
-                                            <?php
-                                                $lineTotal = $item['gia'] * $item['quantity'];
-                                                $subtotal += $lineTotal;
-                                            ?>
-                                        <ul>
-                                            <li class="single-item">
-                                                <div class="item-area">
-                                                    <div class="main-item">
-                                                        <div class="item-img">
-                                                           <a href="product-details.html"> <img src="assets/image/products/<?= $item['anh']  ?> "alt=""></a>
-                                                           <div class="close-btn">
-                                                                <i class="bi bi-x"></i>
-                                                           </div>
-                                                        </div>
-                                                        <div class="content-and-quantity">
-                                                            <div class="content">
-                                                                <h6><a href="product-details.html"><?= $item['ten_san_pham'] ?></a></h6>
-                                                                <span><?= number_format($item['gia'],0,',','.') ?> VNĐ</span>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                        </ul>
-                                        <?php endforeach; ?>
-                                    </div>
-                                    <?php $total = $subtotal + $shipping; ?>
-                                    <div class="cart-footer">
-                                        <div class="pricing-area mb-40">
-                                            <ul>
-                                                <li>
-                                                    <strong>Tổng phụ</strong>
-                                                    <strong class="price"><?= number_format($subtotal,0,',','.') ?> VNĐ</strong>
-                                                </li>
-                                                <li>
-                                                    <strong>Phí vận chuyển</strong>
-                                                    <div class="order-info">
-                                                        <p>Shipping Free*</p>
-                                                        <span> Pickup fee $10.00</span>
-                                                    </div>
-                                                </li>
-                                                <li>
-                                                    <strong>Tổng tiền</strong>
-                                                    <strong class=" price"><?= number_format($total,0,',','.') ?> VNĐ</strong>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div class="payment-method-area">
-                                            <h6>Phương thức thanh toán</h6>
-                                            <ul class="payment-list">
-                                                <li class="cash-delivery active">
-                                                    <div class="payment-check">
-                                                        <h6>Trả tiền trực tiếp</h6>
-                                                    </div>
-                                                    <div class="checked">
-                                                    </div>
-                                                </li>
-                                                <li class="stripe">
-                                                    <h6>Chuyển khoản ngân hàng</h6>
-                                                    <div class="checked">
-                                                    </div>
-                                                </li>
-                                            </ul>
-                                            <div class="choose-payment-method pt-25" id="strip-payment" style="display: none;">
-                                                <div class="row g-4">
-                                                    <img src="assets/image/QR_productpayment.jpg" alt="">
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <button type="submit" class="primary-btn">
-                                            Đặt hàng
-                                        </button>
-                                    </div>
+
+                    <div class="enquery-form-wrapper style-3">
+                        <div class="row">
+
+                            <div class="col-md-6 mb-30">
+                                <div class="form-inner">
+                                    <label>Tên đầy đủ</label>
+                                    <input type="text" name="full_name" placeholder="Nhập họ tên đầy đủ" required>
                                 </div>
-                            </form>
+                            </div>
+
+                            <div class="col-md-6 mb-30">
+                                <div class="form-inner">
+                                    <label>Số điện thoại</label>
+                                    <input type="text" name="phone" placeholder="(84)+ 123 456 789" required>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6 mb-30">
+                                <div class="form-inner">
+                                    <label>Địa chỉ Email</label>
+                                    <input type="email" name="email" placeholder="abc@gmail.com">
+                                </div>
+                            </div>
+
+                            <div class="col-md-6 mb-30">
+                                <div class="form-inner">
+                                    <label>Địa chỉ<span>*</span></label>
+                                    <input type="text" name="address" placeholder="Nơi nhận hàng" required>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6 mb-30">
+                                <div class="form-inner">
+                                    <label>Mã bưu điện</label>
+                                    <input type="text" name="zipcode" placeholder="Mã bưu chính">
+                                </div>
+                            </div>
+
+                            <div class="col-md-12 mb-15">
+                                <div class="form-inner">
+                                    <label>Mô tả</label>
+                                    <textarea name="note" placeholder="Văn bản của bạn ở đây"></textarea>
+                                </div>
+                            </div>
+
+                            <div class="col-md-12 mb-25">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="contactCheck">
+                                    <label class="form-check-label" for="contactCheck">
+                                        Làm ơn lưu lại <span>tên và địa chỉ</span>
+                                    </label>
+                                </div>
+                            </div>
+
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+
+            <!-- ================= CHI TIẾT ĐƠN HÀNG ================= -->
+            <div class="col-xl-5 col-lg-4">
+                <div class="checkout-form-wrapper">
+                    <div class="checkout-form-title">
+                        <h4>Chi tiết đơn hàng</h4>
+                    </div>
+
+                    <div class="order-sum-area">
+                        <div class="cart-menu">
+                            <div class="cart-body">
+
+                                <?php
+$subtotal = 0;
+$shipping = $shippingFee ?? 0;
+$discount = $_SESSION['discount'] ?? 0;
+?>
+
+<?php foreach ($productpayment as $item): ?>
+    <?php
+        $qty = $item['quantity'] ?? 1;
+        $lineTotal = $item['gia'] * $qty;
+        $subtotal += $lineTotal;
+    ?>
+    <ul>
+        <li class="single-item">
+            <div class="item-area">
+                <div class="main-item">
+                    <div class="item-img">
+                        <img src="<?= htmlspecialchars($item['anh']) ?>" alt="">
+                    </div>
+                    <div class="content-and-quantity">
+                        <div class="content">
+                            <h6><?= htmlspecialchars($item['ten_san_pham']) ?></h6>
+                            <span><?= number_format($item['gia'],0,',','.') ?> VNĐ</span>
+                            <small>x <?= $qty ?></small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </li>
+    </ul>
+<?php endforeach; ?>
+
+<?php
+$total = $subtotal + $shipping - $discount;
+?>
+
+
+                            <div class="cart-footer">
+                                <div class="pricing-area mb-40">
+                                    <ul>
+                                        <li>
+                                            <strong>Tổng phụ</strong>
+                                            <strong><?= number_format($subtotal,0,',','.') ?> VNĐ</strong>
+                                        </li>
+                                        <li>
+                                            <strong>Phí vận chuyển</strong>
+                                            <span><?= $shipping == 0 ? 'Miễn phí' : number_format($shipping,0,',','.').' VNĐ' ?></span>
+                                        </li>
+                                        <li>
+                                            <strong>Tổng tiền</strong>
+                                            <strong><?= number_format($total,0,',','.') ?> VNĐ</strong>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <!-- gửi tiền về PHP -->
+                                <input type="hidden" name="subtotal" value="<?= $subtotal ?>">
+                                <input type="hidden" name="shipping" value="<?= $shipping ?>">
+                                <input type="hidden" name="discount" value="<?= $discount ?>">
+                                <input type="hidden" name="total" value="<?= $total ?>">
+
+                                <div class="payment-method-area">
+    <div class="payment-method-area">
+    <h6>Phương thức thanh toán</h6>
+
+    <ul class="payment-list">
+        <li>
+            <label>
+                <input type="radio"
+                       name="payment_method"
+                       value="1"
+                       required>
+                Trả tiền trực tiếp
+            </label>
+        </li>
+
+        <li>
+            <label>
+                <input type="radio"
+                       name="payment_method"
+                       value="2">
+                Chuyển khoản ngân hàng
+            </label>
+        </li>
+    </ul>
+
+    <div class="choose-payment-method pt-25"
+         id="strip-payment"
+         style="display:none;">
+        <img src="assets/image/QR_productpayment.jpg" alt="QR Thanh toán">
     </div>
+</div>
+
+
+
+                                <!-- ❌ KHÔNG bọc <a> -->
+                                <button type="submit" class="primary-btn">
+                                    Đặt hàng
+                                </button>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        </form>
+        <!-- ===== END FORM ===== -->
+
+    </div>
+</div>
+
+    <script>
+function togglePayment(type) {
+    const qrSection = document.getElementById('strip-payment');
+    const paymentItems = document.querySelectorAll('.payment-list li');
+    
+    paymentItems.forEach(li => li.classList.remove('active'));
+    
+    if (type === 'bank') {
+        qrSection.style.display = 'block';
+        document.querySelector('.stripe').classList.add('active');
+    } else {
+        qrSection.style.display = 'none';
+        document.querySelector('.cash-delivery').classList.add('active');
+    }
+}
+document.addEventListener("DOMContentLoaded", function () {
+    const radios = document.querySelectorAll('input[name="payment_method"]');
+    const qrBox = document.getElementById('strip-payment');
+
+    radios.forEach(radio => {
+        radio.addEventListener('change', function () {
+            if (this.value === "2") {
+                qrBox.style.display = "block"; // hiện QR
+            } else {
+                qrBox.style.display = "none";  // ẩn QR
+            }
+        });
+    });
+});
+</script>
     <!-- checkout section ends here -->
     <!-- footer section strats here -->
-    <footer class="fooeter-section">
-        <div class="container">
-            <div class="footer-button-area">
-                <div class="row g-4 mb-100">
-                    <div class="col-lg-4 col-md-6">
-                        <a class="primary-btn footer-btn" href="3columns-left.html">
-                            Shop Online
-                            <svg class="arrow" width="10" height="10" viewBox="0 0 10 10" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path d="M1 9L9 1M9 1C7.22222 1.33333 3.33333 2 1 1M9 1C8.66667 2.66667 8 6.33333 9 9"
-                                    stroke="#1E1E1E" stroke-width="1.5" stroke-linecap="round"></path>
-                            </svg>
-                        </a>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                       <a class="primary-btn footer-btn" href="faq.html">
-                            Ask any questions
-                            <svg class="arrow" width="10" height="10" viewBox="0 0 10 10" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path d="M1 9L9 1M9 1C7.22222 1.33333 3.33333 2 1 1M9 1C8.66667 2.66667 8 6.33333 9 9"
-                                    stroke="#1E1E1E" stroke-width="1.5" stroke-linecap="round"></path>
-                            </svg>
-                        </a>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <a class="primary-btn footer-btn" href="mailto:infoexample@gmail.com">
-                            Email - infoexample@gmail.com
-                            <svg class="arrow" width="10" height="10" viewBox="0 0 10 10" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path d="M1 9L9 1M9 1C7.22222 1.33333 3.33333 2 1 1M9 1C8.66667 2.66667 8 6.33333 9 9"
-                                    stroke="#1E1E1E" stroke-width="1.5" stroke-linecap="round"></path>
-                            </svg>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="row g-lg-3 gy-5 mb-70">
-                <div class="col-lg-4 col-md-6">
-                    <div class="footer-logo-section">
-                        <div class="footer-top-section">
-                            <div class="footer-logo">
-                                <a href="index.html">
-                                    <img src="assets/image/home1/icon/ethics-footer-logo.svg" alt="">
-                                </a>
-                            </div>
-                            <a class="office-location" href="https://www.google.com/maps">medical road <br> House-03,road-8,block-d <br>Rangpur, Bangladesh.</a>
-                            <ul>
-                                <li>
-                                    <a href="https://www.facebook.com/">
-                                        <svg width="6" height="12" viewBox="0 0 6 12"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M3.81526 11.2483V6.46735H5.42818L5.66793 4.59543H3.81526V3.4031C3.81526 2.86293 3.96576 2.4931 4.74101 2.4931H5.72334V0.824182C5.24538 0.77296 4.76495 0.748228 4.28426 0.750099C2.85859 0.750099 1.87976 1.62043 1.87976 3.21818V4.59193H0.277344V6.46385H1.88326V11.2483H3.81526Z" />
-                                        </svg>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="https://youtube.com/">
-                                        <svg width="14" height="14" viewBox="0 0 14 14"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M7.04462 1.74902H7.1225C7.84175 1.75165 11.4861 1.7779 12.4688 2.04215C12.7658 2.1228 13.0365 2.27999 13.2538 2.49803C13.471 2.71607 13.6273 2.98731 13.7069 3.28465C13.7952 3.61715 13.8574 4.05727 13.8994 4.5114L13.9081 4.6024L13.9274 4.8299L13.9344 4.9209C13.9913 5.72065 13.9983 6.46965 13.9991 6.63327V6.6989C13.9983 6.86865 13.9904 7.6684 13.9274 8.5014L13.9204 8.59327L13.9125 8.68427C13.8687 9.18477 13.804 9.68177 13.7069 10.0475C13.6273 10.3449 13.471 10.6161 13.2538 10.8341C13.0365 11.0522 12.7658 11.2094 12.4688 11.29C11.4537 11.563 7.59587 11.5823 7.06125 11.5831H6.937C6.66663 11.5831 5.54838 11.5779 4.37587 11.5376L4.22712 11.5324L4.151 11.5289L4.00138 11.5228L3.85175 11.5166C2.8805 11.4738 1.95563 11.4046 1.5295 11.2891C1.23255 11.2086 0.961931 11.0515 0.74467 10.8336C0.527409 10.6158 0.371108 10.3447 0.291375 10.0475C0.19425 9.68265 0.1295 9.18477 0.08575 8.68427L0.07875 8.5924L0.07175 8.5014C0.028318 7.90851 0.0043884 7.31436 0 6.7199L0 6.61227C0.00175 6.42415 0.00875 5.77402 0.056 5.05652L0.062125 4.9664L0.06475 4.9209L0.07175 4.8299L0.091 4.6024L0.09975 4.5114C0.14175 4.05727 0.203875 3.61627 0.29225 3.28465C0.371849 2.98731 0.528091 2.71607 0.74536 2.49803C0.96263 2.27999 1.23332 2.1228 1.53038 2.04215C1.9565 1.9284 2.88137 1.8584 3.85262 1.81465L4.00138 1.80852L4.15188 1.80327L4.22712 1.80065L4.37675 1.79452C5.2095 1.76775 6.04258 1.75287 6.87575 1.7499L7.04462 1.74902ZM5.6 4.55777V8.77352L9.23738 6.66652L5.6 4.55777Z" />
-                                        </svg>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="https://x.com/">
-                                        <svg width="14" height="14" viewBox="0 0 14 14"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <g>
-                                                <path
-                                                    d="M11.025 0.65625H13.1722L8.48225 6.0305L14 13.3438H9.68012L6.2965 8.9075L2.42462 13.3438H0.2765L5.29287 7.595L0 0.65625H4.43013L7.48825 4.71012L11.025 0.65625ZM10.2725 12.0557H11.4625L3.78262 1.87687H2.50688L10.2725 12.0557Z" />
-                                            </g>
-                                        </svg>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="https://www.linkedin.com/">
-                                        <svg width="14" height="14" viewBox="0 0 14 14"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M2.90719 4.1972C3.61209 4.1972 4.18353 3.62576 4.18353 2.92086C4.18353 2.21597 3.61209 1.64453 2.90719 1.64453C2.20229 1.64453 1.63086 2.21597 1.63086 2.92086C1.63086 3.62576 2.20229 4.1972 2.90719 4.1972Z" />
-                                            <path
-                                                d="M5.38752 5.16523V12.2463H7.5861V8.74457C7.5861 7.82057 7.75994 6.92573 8.9056 6.92573C10.0355 6.92573 10.0495 7.98215 10.0495 8.8029V12.2469H12.2493V8.36365C12.2493 6.45615 11.8386 4.99023 9.60911 4.99023C8.53869 4.99023 7.82119 5.57765 7.52777 6.13357H7.49802V5.16523H5.38752ZM1.80469 5.16523H4.00677V12.2463H1.80469V5.16523Z" />
-                                        </svg>
-                                    </a>
-                                </li>
-                            </ul>
-                            <div class="payment-gateway">
-                                <h6>Secured Payment Gateways</h6>
-                                <div class="icons">
-                                    <img src="assets/image/home1/visa.png" alt="">
-                                    <img src="assets/image/home1/mastercard.png" alt="">
-                                    <img src="assets/image/home1/american-exprees.png" alt="">
-                                    <img src="assets/image/home1/maetro.png" alt="">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-2 col-md-4 col-sm-6 d-flex">
-                    <div class="footer-widget">
-                        <div class="widget-title">
-                            <h5>Category</h5>
-                        </div>
-                        <ul class="widget-list">
-                            <li>
-                                <a href="categories.html">
-                                    Men
-                                    <svg width="6" height="6" viewBox="0 0 6 6" xmlns="http://www.w3.org/2000/svg">
-                                        <circle cx="3" cy="3" r="3" />
-                                    </svg>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="categories.html">
-                                    Women
-                                    <svg width="6" height="6" viewBox="0 0 6 6" xmlns="http://www.w3.org/2000/svg">
-                                        <circle cx="3" cy="3" r="3" />
-                                    </svg>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="categories.html">
-                                    Kids
-                                    <svg width="6" height="6" viewBox="0 0 6 6" xmlns="http://www.w3.org/2000/svg">
-                                        <circle cx="3" cy="3" r="3" />
-                                    </svg>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="categories.html">
-                                    Bag
-                                    <svg width="6" height="6" viewBox="0 0 6 6" xmlns="http://www.w3.org/2000/svg">
-                                        <circle cx="3" cy="3" r="3" />
-                                    </svg>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="categories.html">
-                                    Fragrance
-                                    <svg width="6" height="6" viewBox="0 0 6 6" xmlns="http://www.w3.org/2000/svg">
-                                        <circle cx="3" cy="3" r="3" />
-                                    </svg>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-lg-2 col-md-4 col-sm-6 d-flex justify-content-lg-end ">
-                    <div class="footer-widget">
-                        <div class="widget-title">
-                            <h5>Support</h5>
-                        </div>
-                        <ul class="widget-list">
-                            <li>
-                                <a href="#">
-                                    My Account
-                                    <svg width="6" height="6" viewBox="0 0 6 6" xmlns="http://www.w3.org/2000/svg">
-                                        <circle cx="3" cy="3" r="3" />
-                                    </svg>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="contact.html">
-                                    Our Offline Store
-                                    <svg width="6" height="6" viewBox="0 0 6 6" xmlns="http://www.w3.org/2000/svg">
-                                        <circle cx="3" cy="3" r="3" />
-                                    </svg>
-                                </a>
-                            </li>
-                           <li>
-                                <a href="faq.html">
-                                    FAQ’s
-                                    <svg width="6" height="6" viewBox="0 0 6 6" xmlns="http://www.w3.org/2000/svg">
-                                        <circle cx="3" cy="3" r="3" />
-                                    </svg>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    Return & Refunds
-                                    <svg width="6" height="6" viewBox="0 0 6 6" xmlns="http://www.w3.org/2000/svg">
-                                        <circle cx="3" cy="3" r="3" />
-                                    </svg>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    Privacy Policy
-                                    <svg width="6" height="6" viewBox="0 0 6 6" xmlns="http://www.w3.org/2000/svg">
-                                        <circle cx="3" cy="3" r="3" />
-                                    </svg>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    Help & Support
-                                    <svg width="6" height="6" viewBox="0 0 6 6" xmlns="http://www.w3.org/2000/svg">
-                                        <circle cx="3" cy="3" r="3" />
-                                    </svg>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-12 d-flex justify-content-lg-end justify-content-md-end">
-                    <div class="footer-widget">
-                        <div class="widget-title style-2">
-                            <h5>Our Newsletter</h5>
-                        </div>
-                        <div class="email-area style-2">
-                            <p class="email-text">With subscribe by your email to get notify every single
-                                moment.</p>
-                            <div class="input-area">
-                                <input type="email" placeholder="Enter Email">
-                                <button type="submit">
-                                    <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M15.9647 0.685806C16.0011 0.594942 16.01 0.495402 15.9904 0.399526C15.9707 0.303649 15.9233 0.215653 15.8541 0.146447C15.7849 0.0772403 15.6969 0.0298668 15.601 0.0101994C15.5052 -0.0094681 15.4056 -0.000564594 15.3147 0.0358061L0.76775 5.85481H0.76675L0.31475 6.03481C0.22914 6.06895 0.154635 6.1261 0.0994654 6.19994C0.0442956 6.27377 0.0106078 6.36142 0.00212322 6.4532C-0.00636132 6.54497 0.0106876 6.63731 0.0513867 6.72001C0.0920859 6.8027 0.154851 6.87254 0.23275 6.92181L0.64275 7.18181L0.64375 7.18381L5.63875 10.3618L8.81675 15.3568L8.81875 15.3588L9.07875 15.7688C9.12817 15.8464 9.19805 15.9089 9.28068 15.9493C9.36332 15.9897 9.45551 16.0066 9.54711 15.998C9.63871 15.9894 9.72617 15.9558 9.79985 15.9007C9.87354 15.8456 9.9306 15.7712 9.96475 15.6858L15.9647 0.685806ZM14.1317 2.57581L6.63775 10.0698L6.42275 9.73181C6.38336 9.66978 6.33078 9.6172 6.26875 9.57781L5.93075 9.36281L13.4247 1.86881L14.6027 1.39781L14.1327 2.57581H14.1317Z">
-                                        </path>
-                                    </svg>
-                                </button>
-                            </div>
-                        </div>
-                        <div class="footer-contact-section">
-                            <div class="call-now-section">
-                                <div class="icon">
-                                    <svg width="22" height="22" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
-                                        <g>
-                                            <path
-                                                d="M17.3866 13.6291C16.9362 13.1602 16.3929 12.9094 15.8171 12.9094C15.246 12.9094 14.6981 13.1555 14.2291 13.6245L12.7619 15.0871C12.6412 15.0221 12.5204 14.9617 12.4043 14.9014C12.2372 14.8178 12.0793 14.7389 11.9447 14.6553C10.5703 13.7824 9.32123 12.6448 8.12327 11.1728C7.54286 10.4392 7.15283 9.82166 6.86959 9.19482C7.25034 8.84658 7.60323 8.48441 7.94683 8.13616C8.07684 8.00615 8.20685 7.8715 8.33686 7.74149C9.31194 6.7664 9.31194 5.50344 8.33686 4.52836L7.06925 3.26075C6.92531 3.11681 6.77673 2.96822 6.63743 2.81964C6.35884 2.53176 6.06631 2.23459 5.7645 1.956C5.31411 1.51024 4.77549 1.27344 4.20901 1.27344C3.64254 1.27344 3.09463 1.51024 2.63031 1.956C2.62566 1.96064 2.62566 1.96064 2.62102 1.96528L1.04232 3.55792C0.44798 4.15225 0.109023 4.8766 0.0347313 5.71703C-0.0767067 7.07286 0.322613 8.33582 0.629067 9.16232C1.38127 11.1914 2.50494 13.0719 4.18115 15.0871C6.2149 17.5155 8.66189 19.4332 11.4571 20.7844C12.5251 21.2905 13.9506 21.8895 15.5432 21.9916C15.6407 21.9963 15.7428 22.0009 15.8357 22.0009C16.9083 22.0009 17.8091 21.6155 18.5149 20.8494C18.5195 20.8401 18.5288 20.8355 18.5334 20.8262C18.7749 20.5336 19.0535 20.269 19.346 19.9857C19.5457 19.7954 19.75 19.5957 19.9496 19.3868C20.4093 18.9085 20.6508 18.3513 20.6508 17.7802C20.6508 17.2044 20.4047 16.6519 19.9357 16.1876L17.3866 13.6291ZM19.0488 18.5185C19.0442 18.5185 19.0442 18.5231 19.0488 18.5185C18.8678 18.7135 18.682 18.8899 18.4824 19.0849C18.1805 19.3728 17.8741 19.6746 17.5862 20.0136C17.1172 20.5151 16.5647 20.7519 15.8404 20.7519C15.7707 20.7519 15.6964 20.7519 15.6268 20.7472C14.2477 20.659 12.9662 20.1204 12.005 19.6607C9.37695 18.3885 7.06925 16.5822 5.15159 14.2931C3.56824 12.3847 2.50958 10.6203 1.80845 8.72586C1.37663 7.56969 1.21876 6.6689 1.28841 5.81918C1.33484 5.27592 1.54379 4.82553 1.92918 4.44014L3.51252 2.85679C3.74004 2.6432 3.98149 2.52712 4.2183 2.52712C4.51082 2.52712 4.74763 2.70356 4.89621 2.85214C4.90086 2.85679 4.9055 2.86143 4.91014 2.86607C5.19338 3.13074 5.46269 3.40469 5.74593 3.69721C5.88987 3.8458 6.03845 3.99438 6.18704 4.14761L7.45464 5.41522C7.94683 5.9074 7.94683 6.36244 7.45464 6.85463C7.31999 6.98928 7.18998 7.12393 7.05532 7.25394C6.66529 7.65326 6.29383 8.02472 5.88987 8.3869C5.88058 8.39618 5.8713 8.40083 5.86665 8.41011C5.46733 8.80943 5.54162 9.19947 5.6252 9.46413C5.62985 9.47806 5.63449 9.49199 5.63913 9.50592C5.9688 10.3046 6.43313 11.0568 7.1389 11.9529L7.14355 11.9576C8.42508 13.5363 9.77627 14.7667 11.2668 15.7093C11.4571 15.83 11.6521 15.9275 11.8379 16.0204C12.005 16.104 12.1629 16.1829 12.2976 16.2665C12.3161 16.2758 12.3347 16.2897 12.3533 16.299C12.5111 16.3779 12.6597 16.4151 12.813 16.4151C13.1983 16.4151 13.4398 16.1736 13.5187 16.0947L15.1067 14.5067C15.2646 14.3488 15.5153 14.1585 15.8078 14.1585C16.0957 14.1585 16.3325 14.3395 16.4765 14.4974C16.4811 14.5021 16.4811 14.5021 16.4858 14.5067L19.0442 17.0651C19.5224 17.5387 19.5224 18.0263 19.0488 18.5185Z" />
-                                            <path
-                                                d="M11.8871 5.23568C13.1036 5.43999 14.2087 6.01575 15.0909 6.89797C15.9731 7.78019 16.5442 8.88528 16.7532 10.1018C16.8043 10.4083 17.0689 10.6219 17.3707 10.6219C17.4079 10.6219 17.4404 10.6172 17.4775 10.6126C17.8211 10.5568 18.0487 10.2318 17.9929 9.88822C17.7422 8.41631 17.0457 7.07441 15.9824 6.01111C14.9191 4.9478 13.5772 4.25132 12.1053 4.00058C11.7617 3.94486 11.4413 4.17238 11.3809 4.51134C11.3206 4.85029 11.5435 5.17997 11.8871 5.23568Z" />
-                                            <path
-                                                d="M21.974 9.70466C21.5607 7.28089 20.4185 5.07534 18.6633 3.32019C16.9082 1.56505 14.7026 0.422806 12.2789 0.00955649C11.9399 -0.0508057 11.6195 0.181357 11.5592 0.520314C11.5034 0.863914 11.731 1.1843 12.0746 1.24466C14.2383 1.61148 16.2117 2.63764 17.7811 4.20241C19.3505 5.77183 20.3721 7.74521 20.7389 9.90897C20.79 10.2154 21.0546 10.429 21.3564 10.429C21.3936 10.429 21.4261 10.4244 21.4632 10.4197C21.8022 10.3686 22.0343 10.0436 21.974 9.70466Z" />
-                                        </g>
-                                    </svg>
-                                </div>
-                                <div class="call-now-content">
-                                    <span>Call Now</span>
-                                    <h4>
-                                        <a href="tel:18779876401">1-877-987-6401</a>
-                                    </h4>
-                                </div>
-                            </div>
-                            <p>N:B - Sunday Closed,<span> otherswsie you
-                                    can call anytime within opening hours.</span></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="footer-btm">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="footer-btm-content">
-                            <div class="copyright-area">
-                                <p> © Copyright 2025 <a href="index.html">Ethics </a> | Design By<a href="https://www.egenslab.com/"> Egens Lab </a> </p>
-                            </div>
-                            <div class="right-area">
-                                <svg width="12" height="12" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
-                                    <mask id="mask0_1002_2089" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0"
-                                        y="0" width="12" height="12">
-                                        <rect width="12" height="12" />
-                                    </mask>
-                                    <g>
-                                        <path fill-rule="evenodd" clip-rule="evenodd"
-                                            d="M0 5.99981C0 5.83405 0.0632157 5.67508 0.17574 5.55787C0.288264 5.44066 0.44088 5.37481 0.600014 5.37481H8.7518L6.17534 2.69231C6.06267 2.57496 5.99938 2.41578 5.99938 2.24981C5.99938 2.08384 6.06267 1.92467 6.17534 1.80731C6.28801 1.68995 6.44081 1.62402 6.60015 1.62402C6.75948 1.62402 6.91229 1.68995 7.02496 1.80731L10.625 5.55731C10.6809 5.61537 10.7252 5.68434 10.7555 5.76027C10.7857 5.8362 10.8013 5.9176 10.8013 5.99981C10.8013 6.08202 10.7857 6.16342 10.7555 6.23935C10.7252 6.31529 10.6809 6.38426 10.625 6.44231L7.02496 10.1923C6.91229 10.3097 6.75948 10.3756 6.60015 10.3756C6.44081 10.3756 6.28801 10.3097 6.17534 10.1923C6.06267 10.075 5.99938 9.91578 5.99938 9.74981C5.99938 9.58384 6.06267 9.42467 6.17534 9.30731L8.7518 6.62481H0.600014C0.44088 6.62481 0.288264 6.55897 0.17574 6.44176C0.0632157 6.32455 0 6.16557 0 5.99981Z" />
-                                        <path fill-rule="evenodd" clip-rule="evenodd"
-                                            d="M11.3998 1C11.559 1 11.7116 1.06585 11.8241 1.18306C11.9366 1.30027 11.9998 1.45924 11.9998 1.625V10.375C11.9998 10.5408 11.9366 10.6997 11.8241 10.8169C11.7116 10.9342 11.559 11 11.3998 11C11.2407 11 11.0881 10.9342 10.9755 10.8169C10.863 10.6997 10.7998 10.5408 10.7998 10.375V1.625C10.7998 1.45924 10.863 1.30027 10.9755 1.18306C11.0881 1.06585 11.2407 1 11.3998 1Z" />
-                                    </g>
-                                </svg>
-                                <p>Our Business <a href="#">Policy, Terms & Condition</a></p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
     <!-- footer section end here -->
 
 

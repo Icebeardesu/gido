@@ -7,10 +7,6 @@ class controllerAdmin {
         $this->modelAdmin = new databaseAdmin();
     }
 
-    public function loginAdminPage(){
-        include "admin/views/login.php";
-    }
-
     public function addProductPage(){
         include "admin/views/addProducts.php";
     }
@@ -186,4 +182,69 @@ public function editUser($idAdmin){
     $this->modelAdmin->editUserFunction($name, $email, $phone, $role, $idAdmin);
     header("location: admin.php?pageAdmin=userControl");
 }
+private function isSaveSession($admin){
+        if(session_status() === PHP_SESSION_NONE){
+            session_start();
+        }
+
+        $_SESSION['admin'] = [
+            "nameAdmin" => $admin['ten_nguoi_dung'],
+            "emailAdmin" => $admin['email'],
+            "role" => $admin['vai_tro']
+        ];
+
+    }
+
+    public function loginAdminPage(){
+        include "admin/views/login.php";
+    }
+
+    public function loginAdmin(){
+        $email = $_POST['mail'];
+        $passAdmin = $_POST['mk'];
+
+        $admin = $this->modelAdmin->getUserByEmail($email);
+
+        if(!$admin){
+            echo "<script>
+            alert('Email ko tồn tại');
+            window.location.href = 'admin.php';
+            </script>";
+            exit();
+        } if(!password_verify($passAdmin, $admin['mat_khau'])){
+            echo "<script>
+            alert('Sai mật khẩu!');
+            window.location.href = 'admin.php';
+            </script>";
+            exit();
+        } 
+
+        if($admin['vai_tro'] != 1 && $admin['vai_tro'] != 2){
+            echo "<script>
+            alert('Bạn không có quyền truy cập trang này!');
+            window.location.href = 'admin.php';
+            </script>";
+            exit();
+        }
+
+        $this->isSaveSession($admin);
+    
+        echo "<script>
+        alert('Đăng nhập thành công!');
+        window.location.href = 'admin.php?pageAdmin=dashboard';
+        </script>";
+        exit();
+    }
+
+    public function logoutAdmin(){
+        if(session_status() === PHP_SESSION_NONE){
+            session_start();
+        }
+
+            session_unset();
+            session_destroy();
+
+            header("Location: admin.php");
+            exit;
+    }
 }

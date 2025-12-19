@@ -77,7 +77,7 @@
                                     $grandTotal += $lineTotal;
                                 ?>
                                 <tr>
-                                    <td><img src="assets/image/products/<?= $item['anh'] ?>" width="50"></td>
+                                    <td><img src="<?= $item['anh'] ?>" width="50"></td>
                                     <td><?= $item['ten_san_pham'] ?></td>
                                     <td><?= number_format($item['gia'],0,',','.') ?> VNĐ</td>
                                     <td>

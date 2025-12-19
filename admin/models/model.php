@@ -78,5 +78,39 @@ class databaseAdmin {
         $result = $stmt->fetch(PDO::FETCH_ASSOC);
         return $result['total'];
     }
+    public function getUserByEmail($email){
+    $stmt = $this->conn->prepare(
+        "SELECT * FROM nguoi_dung WHERE email = ? LIMIT 1"
+    );
+    $stmt->execute([$email]);
+    return $stmt->fetch();
+    }
+
+    public function listUser(){
+        $stmt = $this->conn->prepare("SELECT * FROM nguoi_dung");
+        $stmt->execute();
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    }
+
+    public function addUserFunction($id, $name, $email, $passwordHash, $role){
+        $stmt = $this->conn->prepare('INSERT INTO nguoi_dung (id_nguoi_dung, ten_nguoi_dung, email, mat_khau, vai_tro) VALUES (?, ?, ?, ?, ?)');
+        return $stmt->execute([$id, $name, $email, $passwordHash, $role]);
+    }
+
+    public function deleteUserFunction($idAdmin){
+        $stmt = $this->conn->prepare('delete from nguoi_dung where id_nguoi_dung = :id');
+        return $stmt->execute([":id" => $idAdmin]);
+    }
+
+    public function editUserFunction($name, $email, $phone, $role, $idAdmin){
+        $stmt = $this->conn->prepare('update nguoi_dung set ten_nguoi_dung = ?, email = ?, so_dien_thoai = ?, vai_tro = ? where id_nguoi_dung = ?');
+        return $stmt->execute([$name, $email, $phone, $role, $idAdmin]);
+    }
+
+    public function getUserByID($idAdmin){
+        $stmt = $this->conn->prepare('select * from nguoi_dung where id_nguoi_dung = :id');
+        $stmt->execute([":id" => $idAdmin]);
+        return $stmt->fetch(PDO::FETCH_ASSOC);
+    }
 }
 ?>
