@@ -1,6 +1,6 @@
 <style>
 .checkout-success {
-    max-width: 900px;
+    max-width: 950px;
     margin: 40px auto;
     padding: 30px;
     background: #ffffff;
@@ -9,7 +9,25 @@
     font-family: Arial, sans-serif;
 }
 
+/* ===== TIÊU ĐỀ ===== */
+.order-success-title {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.order-success-title h2 {
+    color: #28a745;
+    margin-bottom: 8px;
+}
+
+.order-success-title p {
+    color: #666;
+    font-size: 15px;
+}
+
+/* ===== INFO ===== */
 .checkout-success h4 {
+    margin-top: 25px;
     margin-bottom: 15px;
     color: #222;
 }
@@ -19,6 +37,7 @@
     color: #444;
 }
 
+/* ===== TABLE ===== */
 .checkout-success table {
     width: 100%;
     border-collapse: collapse;
@@ -30,6 +49,7 @@
     padding: 12px;
     border-bottom: 1px solid #e5e5e5;
     text-align: center;
+    vertical-align: middle;
 }
 
 .checkout-success th {
@@ -47,10 +67,20 @@
     color: #000;
 }
 
+/* ===== IMAGE ===== */
+.product-img {
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+/* ===== BUTTON ===== */
 .checkout-success .btn {
     display: inline-block;
     margin-top: 25px;
-    padding: 12px 25px;
+    padding: 12px 30px;
     background: #0d6efd;
     color: #fff;
     text-decoration: none;
@@ -64,7 +94,22 @@
 </style>
 
 <div class="checkout-success container">
+
+    <!-- ✅ TIÊU ĐỀ -->
+    <div class="order-success-title">
+        <h2>🎉 Đặt hàng thành công!</h2>
+        <p>Cảm ơn bạn đã mua sắm tại cửa hàng của chúng tôi</p>
+    </div>
+
+    <!-- ✅ THÔNG TIN ĐƠN -->
     <h4>Mã đơn hàng: <?= htmlspecialchars($order['id']) ?></h4>
+    <p>
+    <strong>Ngày đặt:</strong>
+    <?= !empty($order['created_at']) 
+        ? date('d/m/Y H:i', strtotime($order['created_at'])) 
+        : '---' ?>
+</p>
+
     <p><strong>Khách hàng:</strong> <?= htmlspecialchars($order['customer_name']) ?></p>
     <p><strong>Điện thoại:</strong> <?= htmlspecialchars($order['phone']) ?></p>
     <p><strong>Email:</strong> <?= htmlspecialchars($order['email']) ?></p>
@@ -73,10 +118,12 @@
     <p><strong>Phương thức:</strong> <?= $order['phuong_thuc'] == 1 ? 'Tiền mặt' : 'Chuyển khoản' ?></p>
     <p><strong>Trạng thái:</strong> <?= htmlspecialchars($order['status']) ?></p>
 
+    <!-- ✅ CHI TIẾT SẢN PHẨM -->
     <h4>Chi tiết sản phẩm</h4>
     <table>
         <thead>
             <tr>
+                <th>Ảnh</th>
                 <th>Sản phẩm</th>
                 <th>Đơn giá</th>
                 <th>Số lượng</th>
@@ -91,6 +138,13 @@
                 $total += $subtotal;
         ?>
             <tr>
+                <td>
+                    <img 
+                        src="assets/image/products/<?= htmlspecialchars($item['anh'] ?? 'no-image.png') ?>"
+                        class="product-img"
+                        alt="<?= htmlspecialchars($item['ten_san_pham']) ?>"
+                    >
+                </td>
                 <td><?= htmlspecialchars($item['ten_san_pham']) ?></td>
                 <td><?= number_format($item['gia']) ?>₫</td>
                 <td><?= $item['so_luong'] ?></td>
@@ -100,7 +154,7 @@
         </tbody>
         <tfoot>
             <tr>
-                <th colspan="3">Tổng đơn hàng:</th>
+                <th colspan="4">Tổng đơn hàng:</th>
                 <th><?= number_format($total) ?>₫</th>
             </tr>
         </tfoot>

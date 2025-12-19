@@ -166,10 +166,7 @@ class controller {
         include "./views/faq.php";
         include "./views/footer.php";
     }
-    public function checkout(): void
-{
-    session_start();
-
+    public function checkout(): void{
     // lấy giỏ hàng từ session
     $productpayment = $_SESSION['cart'] ?? [];
 
@@ -183,7 +180,6 @@ class controller {
     $shippingFee = 0;
 
     // load view
-    include "./views/header-main-without-home.php";
     include "./views/checkout-page.php";
     include "./views/footer.php";
 }
@@ -221,7 +217,8 @@ class controller {
             'phi_giao_hang' => $shipping,
             'giam_gia' => $discount,
             'thanh_toan' => $subtotal + $shipping - $discount,
-            'phuong_thuc' => $_POST['payment_method'] ?? 1
+            'phuong_thuc' => $_POST['payment_method'] ?? 1,
+            'created_at' => date('Y-m-d H:i:s')
         ];
 
         $orderId = $this->model->create($data);
