@@ -113,6 +113,8 @@ class controller {
         }
 
         $productdetail = $this->model->getProductByID($id);
+        $products = $this->model->getAll();
+
         
         // Thêm dòng này để debug
         if(!$productdetail){
