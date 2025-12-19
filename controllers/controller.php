@@ -198,6 +198,7 @@ class controller {
     public function registerLoginForm(){
         include "./views/register-login-form.php";
     }
+<<<<<<< Updated upstream
 
     public function registerCustomer(){
         $id = uniqid('USER');
@@ -279,3 +280,6 @@ class controller {
     }
 }
 ?>
+=======
+}
+>>>>>>> Stashed changes

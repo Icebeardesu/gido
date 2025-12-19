@@ -74,12 +74,32 @@ class database {
         $stmt = $this->conn->prepare("insert into nguoi_dung(id_nguoi_dung, ten_nguoi_dung, email, mat_khau) values(?, ?, ?, ?)");
         return $stmt->execute([$id, $ten, $email, $passwordHash]);
     }
+<<<<<<< Updated upstream
     public function getUserByEmail($email){
     $stmt = $this->conn->prepare(
         "SELECT * FROM nguoi_dung WHERE email = ? LIMIT 1"
     );
     $stmt->execute([$email]);
     return $stmt->fetch();
+=======
+
+    // Lưu chi tiết sản phẩm
+
+
+
+    // Lấy thông tin hóa đơn theo ID
+    public function showHoaDon($id) {
+        $stmt = $this->conn->prepare("SELECT * FROM hoa_don WHERE id = ?");
+        $stmt->execute([$id]);
+        return $stmt->fetch(PDO::FETCH_ASSOC);
+    }
+
+    // Lấy chi tiết sản phẩm theo hóa đơn
+    public function getByHoaDon($id) {
+        $stmt = $this->conn->prepare("SELECT * FROM chi_tiet_hoa_don WHERE id_hoa_don = ?");
+        $stmt->execute([$id]);
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+>>>>>>> Stashed changes
     }
 }
 ?>

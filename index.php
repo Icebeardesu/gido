@@ -48,6 +48,7 @@ switch ($page) {
     case 'profileCustomer':
         $controller->profileCustomer();
         break;
+<<<<<<< Updated upstream
     case 'registerLoginForm':
         $controller->registerLoginForm();
         break;
@@ -60,6 +61,8 @@ switch ($page) {
     case 'registerCustomer':
         $controller->registerCustomer();
         break;
+=======
+>>>>>>> Stashed changes
     default:
     echo "lỗi 404 - không tìm thấy trang này!";
     break;
