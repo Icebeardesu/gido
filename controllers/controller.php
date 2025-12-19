@@ -263,14 +263,16 @@ class controller {
     }
 
     public function profileCustomer(){
-        include "./views/profileCustomer.php";
+        include "./views/header-main-without-home.php";
+        include "./views/profile.php";
+        include "./views/footer.php";
     }
 
     public function logoutFunction(){
     if(session_status() === PHP_SESSION_NONE){
         session_start();
     }
-
+    
     session_unset();
     session_destroy();
 
