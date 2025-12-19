@@ -41,6 +41,8 @@ switch ($page) {
     case 'about':
         $controller->about();
         break;
+    case "faq":
+        $controller->faq();
     default:
     echo "lỗi 404 - không tìm thấy trang này!";
     break;

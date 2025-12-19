@@ -166,7 +166,7 @@ class controller {
         include "./views/header-main-without-home.php";
         include "./views/faq.php";
         include "./views/footer.php";
-    }
+    }   
     public function about(){
         include "./views/header-main-without-home.php";
         include "./views/about.php";

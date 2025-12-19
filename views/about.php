@@ -31,10 +31,10 @@
             <div class="row">
                 <div class="col-lg-12 d-flex justify-content-center">
                     <div class="banner-content style-2 text-center">
-                        <h1>About us</h1>
+                        <h1>Giới thiệu</h1>
                         <ul class="breadcrumb-list">
-                            <li><a href="index.html">Home</a></li>
-                            <li><span>/ </span>About us</li>
+                            <li><a href="index.html">Trang chủ</a></li>
+                            <li><span>/ </span>Giới thiệu</li>
                         </ul>
                     </div>
                 </div>
@@ -48,8 +48,8 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="video-section-image">
-                        <img src="assets/image/inner-page/video-image.jpg" alt="">
-                        <a href="assets/image/home5/home-banner-img5.jpg" class="video-area video-player">
+                        <img src="https://graphicsfamily.com/wp-content/uploads/edd/2024/12/Ecommerce-Shoes-Website-Banner-Ad-Design-scaled.jpg"  alt="">
+                        <a href=" " class="video-area video-player">
                             <div class="icon">
                                 <svg class="video-circle" xmlns="http://www.w3.org/2000/svg"
                                     xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="65px"
@@ -75,13 +75,9 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="our-brand-content text-center">
-                        <h2>Welcome to Ethics, where style meets innovation</h2>
-                        <p>Founded in [Year], [Your Brand Name] emerged from a passion for fashion and a desire bring unique, high-quality clothing to the forefront of the e-commerce world. Our journey began with a simple mission: to make fashion accessible, exciting, and inclusive for everyone. What started as a small collection has blossomed into a diverse and expansive range of apparel, accessories, and footwear, all meticulously curated to help you express your unique style.Founded in [Year], [Your Brand Name] emerged from a passion for fashion and a desire
-                            to bring unique, high-quality clothing to the forefront of the e-commerce world. Our journey
-                            began with a simple mission: to make fashion accessible, exciting, and inclusive for
-                            everyone. What started as a small collection has blossomed into a diverse and expansive
-                            range of apparel, accessories, and footwear, all meticulously help you express
-                            your unique style.</p>
+                        <h2>Về chúng tôi – IgniteFoot</h2>
+                        <p>IgniteFoot là thương hiệu bán giày trực tuyến được xây dựng với mong muốn mang đến những sản phẩm thời trang, năng động và phù hợp với phong cách sống hiện đại. Chúng tôi tin rằng mỗi đôi giày không chỉ đơn thuần là vật dụng hằng ngày, mà còn là cách để bạn thể hiện cá tính, sự tự tin và tinh thần không ngừng chuyển động.
+                            Tại IgniteFoot, chúng tôi cung cấp đa dạng các mẫu giày từ giày thể thao thiết kế trẻ trung, dễ phối đồ, phù hợp cho nhiều hoàn cảnh như đi học, đi làm, tập luyện hay dạo phố.
                     </div>
                 </div>
             </div>
@@ -99,17 +95,13 @@
                 </div>
                 <div class="col-lg-6 d-flex align-items-center wow animate fadeInRight" data-wow-delay="200ms" data-wow-duration="1500ms">
                     <div class="value-content">
-                        <h3>Our Values</h3>
+                        <h3>Những người thành lập</h3>
                         <ul>
-                            <li>1.Quality: We source the finest materials and partner with skilled artisans to create
-                                products
-                                that stand the test of time.</li>
-                            <li> 2.Sustainability: We are dedicated to promoting a more sustainable fashion industry.
-                            </li>
-                            <li> 3.Inclusivity: Fashion should be accessible to all. We offer a wide range of sizes and
-                                styles to
-                                celebrate the diversity of our customers.</li>
-                            <li>4.Innovation: We stay ahead of the curve by constantly evolving and innovating.</li>
+                            <li>1. Nguyễn Quang Vinh</li>
+                            <li>2. Nguyễn Duy Mạnh</li>
+                            <li>3. Nghiêm Chung Kiên<li>
+                            <Li>Âu Văn Quốc</Li>
+                            <li>Ma Quốc Anh</li> 
                         </ul>
                     </div>
                 </div>
