@@ -89,7 +89,7 @@
 
       <li class="nav-item">
         <a class="nav-link" href="admin.php?pageAdmin=userControl">
-          <i class="bi bi-people me-1"></i> Quản lý khách hàng
+          <i class="bi bi-people me-1"></i> Quản lý người dùng
         </a>
       </li>
 
